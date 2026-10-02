@@ -10,7 +10,7 @@ from PIL import Image
 
 import correction_store as store
 from material_state import META_DONE, OCR_DONE, metadata_complete
-from probe import MODEL, client
+from model_client import MODEL, client
 
 JOB = None
 

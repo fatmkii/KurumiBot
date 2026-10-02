@@ -84,17 +84,6 @@ def page_state(page):
     items, seed = [], "pending"
     if result and result.get("status") == "ok":
         seed, items = "round2", result["items"]
-    else:
-        old = read(HERE / "artifacts/crop_catalog.json", [])
-        for entry in old:
-            if entry["page_id"] != page["id"]:
-                continue
-            c = entry["candidate"]
-            if valid_box(c.get("reply_bbox")):
-                items.append({"id": entry["id"], "bbox": c["reply_bbox"], "quote": c["quote"],
-                              "speaker": "uncertain", "notes": "首轮候选，需重新确认说话人与截图"})
-        if items:
-            seed = "round1"
     items = [material(i) for i in items]
     return {"page_id": page["id"], "revision": 0, "reviewed": False, "source_round": seed,
             "items": items, "original_items": items, "notes": "", "updated_at": ""}

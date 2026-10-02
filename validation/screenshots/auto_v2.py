@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from PIL import Image
 
 from correction_store import AUTO, CORRECTIONS, HERE, catalogue, human_review, read, source_bytes, valid_box, write
-from probe import ROOT, MODEL, client, image_block
+from model_client import ROOT, MODEL, client, image_block
 
 LOCATE = """最后一张是待处理漫画页，之前的图仅作外观参考，不是待提取页面。
 正参考是久留美；负参考分别是黑发双马尾、白发短发、长发角色，均不是久留美。
@@ -42,9 +42,9 @@ def references():
     for label, path in [
         ("正参考：久留美", ROOT / "pics_sample/1.png"),
         ("正参考：久留美", ROOT / "pics_sample/2.jpg"),
-        ("负参考：黑发双马尾角色，不是久留美", HERE / "artifacts/crops/v03-p009-c01-A.png"),
-        ("负参考：白发角色，不是久留美", HERE / "artifacts/crops/v06-p036-c01-A.png"),
-        ("负参考：长发角色，不是久留美", HERE / "artifacts/crops/v04-p094-c01-A.png")]:
+        ("负参考：黑发双马尾角色，不是久留美", HERE / "references/black-twin-tail.png"),
+        ("负参考：白发角色，不是久留美", HERE / "references/white-short-hair.png"),
+        ("负参考：长发角色，不是久留美", HERE / "references/long-hair.png")]:
         blocks += [{"type": "text", "text": label}, image_block(path)]
     return blocks
 
@@ -165,11 +165,6 @@ def run(pages, workers=2):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--all", action="store_true", help="Process all 920 images; resumes existing successful records")
     parser.add_argument("--workers", type=int, choices=[1, 2, 3], default=2)
     args = parser.parse_args()
-    pages = catalogue()
-    if not args.all:
-        ids = {p["id"] for p in read(HERE / "results/sample_manifest.json")}
-        pages = [p for p in pages if p["id"] in ids]
-    run(pages, args.workers)
+    run(catalogue(), args.workers)
