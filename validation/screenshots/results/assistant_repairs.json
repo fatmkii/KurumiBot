@@ -1,0 +1,27 @@
+{
+  "human_modification_seconds": null,
+  "repairs": [
+    {
+      "id": "v01-p009-c02",
+      "bbox": [
+        500,
+        600,
+        940,
+        940
+      ],
+      "notes": "扩大左侧和下侧范围保留妈妈气泡及脸",
+      "path": "artifacts/repairs/v01-p009-c02-B.png"
+    },
+    {
+      "id": "v01-p032-c01",
+      "bbox": [
+        0,
+        240,
+        1000,
+        1000
+      ],
+      "notes": "合并同格对白并保留越界人物及气泡",
+      "path": "artifacts/repairs/v01-p032-c01-B.png"
+    }
+  ]
+}

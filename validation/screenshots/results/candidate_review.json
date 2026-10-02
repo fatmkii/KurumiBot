@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "v01-p009-c01",
+    "page_id": "v01-p009",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "開什麼玩笑!!是誰說的能漲的!!還我2000萬円!!",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "fix",
+    "notes": "B包含下一格的截断内容"
+  },
+  {
+    "id": "v01-p009-c02",
+    "page_id": "v01-p009",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "媽媽!?",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "妈妈气泡在左侧被截断"
+  },
+  {
+    "id": "v01-p032-c01",
+    "page_id": "v01-p032",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "不對！媽媽不是我殺的！",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "同格对白拆分且裁图缺人物或另一气泡"
+  },
+  {
+    "id": "v01-p032-c02",
+    "page_id": "v01-p032",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "她一開始來拜託我的話就不會自殺了！傻瓜！傻瓜！！",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "同格对白拆分且裁图缺可辨人物"
+  },
+  {
+    "id": "v01-p084-c01",
+    "page_id": "v01-p084",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "果然還是不能就此收手……!!",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v01-p122-c01",
+    "page_id": "v01-p122",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "哎？……等下\n這是……",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v02-p009-c01",
+    "page_id": "v02-p009",
+    "role_status": "mixed_speakers",
+    "gold_indexes": [],
+    "quote": "可是這個人虧慘了啊…你要是不想虧的話就趕快去學習啊？嗚…我不擅長學習…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "不是久留美且混入不同角色对白"
+  },
+  {
+    "id": "v02-p009-c02",
+    "page_id": "v02-p009",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "呵呵 這傢伙 玩得太爛了 反而變得有意思了…「FX鮫人小葵」算了 乾脆改名叫",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v02-p039-c01",
+    "page_id": "v02-p039",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "嗯…",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词只提取嗯且重复"
+  },
+  {
+    "id": "v02-p039-c02",
+    "page_id": "v02-p039",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "因為我沒有玩這個的才能…",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词漏嗯且重复"
+  },
+  {
+    "id": "v02-p039-c03",
+    "page_id": "v02-p039",
+    "role_status": "uncertain",
+    "gold_indexes": [],
+    "quote": "這樣真的很可惜哦",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "基准已标记归属不确定且气泡被截断"
+  },
+  {
+    "id": "v02-p039-c04",
+    "page_id": "v02-p039",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "久留美你",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "长发角色对白"
+  },
+  {
+    "id": "v02-p039-c05",
+    "page_id": "v02-p039",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "明明有著成為億萬富翁的潛力…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "长发角色对白"
+  },
+  {
+    "id": "v02-p085-c01",
+    "page_id": "v02-p085",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "呃…是芽吹…",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "边缘手机文字被截断"
+  },
+  {
+    "id": "v02-p085-c02",
+    "page_id": "v02-p085",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "太好了…今天不是講ＦＸ的話題…",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "角色内心独白完整"
+  },
+  {
+    "id": "v02-p100-c01",
+    "page_id": "v02-p100",
+    "role_status": "uncertain",
+    "gold_indexes": [],
+    "quote": "沒辦法的…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "基准已标记归属不确定"
+  },
+  {
+    "id": "v02-p100-c02",
+    "page_id": "v02-p100",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "我沒辦法\n放棄FX了…",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "下半部分放弃FX气泡缺失"
+  },
+  {
+    "id": "v02-p123-c01",
+    "page_id": "v02-p123",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "不要去！",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v02-p123-c02",
+    "page_id": "v02-p123",
+    "role_status": "uncertain",
+    "gold_indexes": [],
+    "quote": "讓這傢伙消失吧！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "幻想人物归属不确定且气泡截断"
+  },
+  {
+    "id": "v03-p009-c01",
+    "page_id": "v03-p009",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "嗚噢…這個反彈…能行的吧…？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v03-p009-c02",
+    "page_id": "v03-p009",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "能漲的樣子…！這個盈利…！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v03-p009-c03",
+    "page_id": "v03-p009",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "開起來…還能追加甜點…!?",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v03-p009-c04",
+    "page_id": "v03-p009",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "嗯！不可能輕易地跌破1.35的…！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v03-p048-c01",
+    "page_id": "v03-p048",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "嗨～",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "电话另一端黑发角色"
+  },
+  {
+    "id": "v03-p048-c02",
+    "page_id": "v03-p048",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "你還在玩\nFX 嗎",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "电话另一端黑发角色"
+  },
+  {
+    "id": "v03-p048-c03",
+    "page_id": "v03-p048",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "感覺你\n沒什麼精神啊…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "电话另一端黑发角色"
+  },
+  {
+    "id": "v03-p048-c04",
+    "page_id": "v03-p048",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "虧了嗎？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "电话另一端黑发角色"
+  },
+  {
+    "id": "v03-p056-c01",
+    "page_id": "v03-p056",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "漲了好多",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "fix",
+    "notes": "同格对白拆分且B截断账户说明"
+  },
+  {
+    "id": "v03-p056-c02",
+    "page_id": "v03-p056",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "要是我多買點就好了…",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "fix",
+    "notes": "重复候选且B截断账户说明"
+  },
+  {
+    "id": "v03-p095-c01",
+    "page_id": "v03-p095",
+    "role_status": "mixed_speakers",
+    "gold_indexes": [],
+    "quote": "喂…喂\n我現在確實\n沒法報告！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "混合其他角色的对白"
+  },
+  {
+    "id": "v03-p095-c02",
+    "page_id": "v03-p095",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "能贏到最後\n的人\n是我…！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "白发芽吹的发言"
+  },
+  {
+    "id": "v03-p095-c03",
+    "page_id": "v03-p095",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "什麼？",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整反应对白"
+  },
+  {
+    "id": "v03-p126-c01",
+    "page_id": "v03-p126",
+    "role_status": "correct",
+    "gold_indexes": [
+      0,
+      1
+    ],
+    "quote": "嗯…我是覺得差不多要漲了…不過以防萬一先出金100萬好了…至少把交稅部分…",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "不同格合并且左侧气泡被裁掉"
+  },
+  {
+    "id": "v03-p126-c02",
+    "page_id": "v03-p126",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "切…乾脆別出金全部身家押上去一口氣全部虧完那樣才好…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "芽吹对白"
+  },
+  {
+    "id": "v03-p126-c03",
+    "page_id": "v03-p126",
+    "role_status": "mixed_speakers",
+    "gold_indexes": [],
+    "quote": "我接下來還有課先走了！啊辛苦了我那份錢放這裡了",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "混入多人对白不能作为久留美候选"
+  },
+  {
+    "id": "v03-p126-c04",
+    "page_id": "v03-p126",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "…萌智子前輩久留美前輩她做了美日的多頭嗎？給人感覺是那樣",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "另一角色发言"
+  },
+  {
+    "id": "v03-p126-c05",
+    "page_id": "v03-p126",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "那樣子久留美前輩這次會輸吧…為什麼呢？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "另一角色发言"
+  },
+  {
+    "id": "v04-p022-c01",
+    "page_id": "v04-p022",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "我最初聽到這個方法之時還不理解",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "同格拆分且左气泡截断"
+  },
+  {
+    "id": "v04-p022-c02",
+    "page_id": "v04-p022",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "還很輕蔑…",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "direct",
+    "notes": "A仅窄气泡区域而B完整但重复"
+  },
+  {
+    "id": "v04-p022-c03",
+    "page_id": "v04-p022",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "可現在看來",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词只提取一半"
+  },
+  {
+    "id": "v04-p022-c04",
+    "page_id": "v04-p022",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "那其實才是最強的戰法…？",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词只提取一半且重复"
+  },
+  {
+    "id": "v04-p022-c05",
+    "page_id": "v04-p022",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "總有一天能堅持到勝利的到來…！？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "芽吹对白"
+  },
+  {
+    "id": "v04-p061-c01",
+    "page_id": "v04-p061",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "真突然啊……",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "上侧气泡及完整台词缺失"
+  },
+  {
+    "id": "v04-p061-c02",
+    "page_id": "v04-p061",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "缺錢？需要多少？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "手机中的芽吹发言"
+  },
+  {
+    "id": "v04-p061-c03",
+    "page_id": "v04-p061",
+    "role_status": "correct",
+    "gold_indexes": [
+      2
+    ],
+    "quote": "唔……聽起來很不妙吧？",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "上侧唔听起来气泡截断"
+  },
+  {
+    "id": "v04-p067-c01",
+    "page_id": "v04-p067",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "那只是…\n我運氣好…\n罷了…",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "左侧我运气好罢了气泡被裁掉"
+  },
+  {
+    "id": "v04-p067-c02",
+    "page_id": "v04-p067",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "夠了…\n擅自提出要求的\n是我這邊…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "手机另一端发言"
+  },
+  {
+    "id": "v04-p068-c01",
+    "page_id": "v04-p068",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "為甚麼芽吹會知道我借錢的事情…？",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "原文为什么被识别为为甚么"
+  },
+  {
+    "id": "v04-p068-c02",
+    "page_id": "v04-p068",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "關於借錢的事父親說的話才是正確的。在必須借錢才能賺到錢的時候就有問題了吧。如果借錢給芽吹那才是真的害了她…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "仅内心文字没有可辨角色"
+  },
+  {
+    "id": "v04-p068-c03",
+    "page_id": "v04-p068",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "不…沒事的…！我說的話沒有錯…！",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v04-p094-c01",
+    "page_id": "v04-p094",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "這種工作…怎麼樣…！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "长发角色"
+  },
+  {
+    "id": "v04-p094-c02",
+    "page_id": "v04-p094",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "不啊我認真的",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "长发角色"
+  },
+  {
+    "id": "v05-p047-c01",
+    "page_id": "v05-p047",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "外國匯兌保證金交易…！",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词漏FX"
+  },
+  {
+    "id": "v05-p047-c02",
+    "page_id": "v05-p047",
+    "role_status": "correct",
+    "gold_indexes": [
+      2
+    ],
+    "quote": "2000萬…吧…",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "包含上一格被截断的角色及吧气泡边缘"
+  },
+  {
+    "id": "v05-p078-c01",
+    "page_id": "v05-p078",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "完成……！",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "A人物过窄而B含下一格截断内容"
+  },
+  {
+    "id": "v05-p078-c02",
+    "page_id": "v05-p078",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "限價止盈訂單…",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "A仅气泡且缺120.05元而B含下一格截断内容"
+  },
+  {
+    "id": "v05-p078-c03",
+    "page_id": "v05-p078",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "這樣一來不管是上漲還是下跌",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "图表格没有可辨角色"
+  },
+  {
+    "id": "v05-p078-c04",
+    "page_id": "v05-p078",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "我都做好了自動結算的準備",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "图表格没有可辨角色"
+  },
+  {
+    "id": "v05-p078-c05",
+    "page_id": "v05-p078",
+    "role_status": "correct",
+    "gold_indexes": [
+      2
+    ],
+    "quote": "大行情的話區區117元",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "A仅文字局部而B上侧文字截断"
+  },
+  {
+    "id": "v05-p078-c06",
+    "page_id": "v05-p078",
+    "role_status": "correct",
+    "gold_indexes": [
+      2
+    ],
+    "quote": "給我輕鬆突破吧！",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "同格拆分且裁图文字截断"
+  },
+  {
+    "id": "v05-p131-c01",
+    "page_id": "v05-p131",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "我今天邀請你",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v05-p131-c02",
+    "page_id": "v05-p131",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "只是因為想要和你拉近關係……！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "黑发双马尾角色"
+  },
+  {
+    "id": "v05-p131-c03",
+    "page_id": "v05-p131",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "對於插手這件事的你 實際是怎樣的人",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "长发角色"
+  },
+  {
+    "id": "v05-p131-c04",
+    "page_id": "v05-p131",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "我有想了解的興趣 也是理所當然的吧？",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "其他角色发言"
+  },
+  {
+    "id": "v05-p146-c01",
+    "page_id": "v05-p146",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "嗚",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "A只有气泡而B没有另一侧完整反应文字"
+  },
+  {
+    "id": "v05-p146-c02",
+    "page_id": "v05-p146",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "嗚嗚嗚嗚～",
+    "quote_complete_correct": false,
+    "A": "fix",
+    "B": "fix",
+    "notes": "同格拆分且上侧另一气泡被截断"
+  },
+  {
+    "id": "v05-p154-c01",
+    "page_id": "v05-p154",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "現在·的·市·場……！",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v05-p154-c02",
+    "page_id": "v05-p154",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "我·放·手·的·理·由·是·——",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "上侧我的文字被截断"
+  },
+  {
+    "id": "v06-p009-c01",
+    "page_id": "v06-p009",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "如果只是暫時性的",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v06-p009-c02",
+    "page_id": "v06-p009",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": ":有可能！",
+    "quote_complete_correct": false,
+    "A": "direct",
+    "B": "direct",
+    "notes": "截图完整但台词只提取有可能"
+  },
+  {
+    "id": "v06-p036-c01",
+    "page_id": "v06-p036",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "——可是我",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "白发芽吹"
+  },
+  {
+    "id": "v06-p036-c02",
+    "page_id": "v06-p036",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "意外地\n心裡很平靜呢…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "白发芽吹"
+  },
+  {
+    "id": "v06-p036-c03",
+    "page_id": "v06-p036",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "反倒是",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "白发芽吹"
+  },
+  {
+    "id": "v06-p036-c04",
+    "page_id": "v06-p036",
+    "role_status": "wrong",
+    "gold_indexes": [],
+    "quote": "感覺\n肩膀一鬆",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "白发芽吹"
+  },
+  {
+    "id": "v06-p069-c01",
+    "page_id": "v06-p069",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "我想買…！我想買…！！我想買…！！！",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v06-p069-c02",
+    "page_id": "v06-p069",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "澳元絕對會回到100日元的…！",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "只有头发局部和图表"
+  },
+  {
+    "id": "v06-p069-c03",
+    "page_id": "v06-p069",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "實現…夢想…！",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "上下相邻格文字及内容被截断"
+  },
+  {
+    "id": "v06-p069-c04",
+    "page_id": "v06-p069",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "已經沒錢可以充進FX裡了…",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "手及银行卡没有可辨角色"
+  },
+  {
+    "id": "v06-p089-c01",
+    "page_id": "v06-p089",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "我的盤感已經出現了偏差",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v06-p089-c02",
+    "page_id": "v06-p089",
+    "role_status": "no_visible_character",
+    "gold_indexes": [],
+    "quote": "結果美日還是跌下去了現在118元",
+    "quote_complete_correct": false,
+    "A": "unusable",
+    "B": "unusable",
+    "notes": "图表及不完整头部"
+  },
+  {
+    "id": "v06-p089-c03",
+    "page_id": "v06-p089",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "果然還是不應該止損的",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v06-p135-c01",
+    "page_id": "v06-p135",
+    "role_status": "correct",
+    "gold_indexes": [
+      0
+    ],
+    "quote": "放心吧！我現在決勝的貨幣漲了的話就準備引退了！",
+    "quote_complete_correct": true,
+    "A": "direct",
+    "B": "direct",
+    "notes": "完整角色及对白"
+  },
+  {
+    "id": "v06-p135-c02",
+    "page_id": "v06-p135",
+    "role_status": "correct",
+    "gold_indexes": [
+      1
+    ],
+    "quote": "做多歐元瑞郎300手！",
+    "quote_complete_correct": true,
+    "A": "fix",
+    "B": "fix",
+    "notes": "上侧做多及300手文字截断"
+  }
+]

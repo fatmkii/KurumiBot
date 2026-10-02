@@ -1,0 +1,392 @@
+[
+  {
+    "id": "v01-p009",
+    "volume": 1,
+    "archive": "FX戰士久留美 - 卷01.zip",
+    "source_file": "0009.jpg",
+    "dimensions": [
+      892,
+      1280
+    ],
+    "path": "artifacts/pages/v01-p009.jpg",
+    "negative": false,
+    "sha256": "c089b3f632c312874efd218cc08aab1384b80465956a0282c72eab5d37817624"
+  },
+  {
+    "id": "v01-p032",
+    "volume": 1,
+    "archive": "FX戰士久留美 - 卷01.zip",
+    "source_file": "0032.jpg",
+    "dimensions": [
+      892,
+      1280
+    ],
+    "path": "artifacts/pages/v01-p032.jpg",
+    "negative": false,
+    "sha256": "03c1214e28f13f2e8eaac83c5c53defa074a553a9c8cab9bd0b20f71e40c7a6f"
+  },
+  {
+    "id": "v01-p084",
+    "volume": 1,
+    "archive": "FX戰士久留美 - 卷01.zip",
+    "source_file": "0084.jpg",
+    "dimensions": [
+      892,
+      1280
+    ],
+    "path": "artifacts/pages/v01-p084.jpg",
+    "negative": false,
+    "sha256": "6318a221a80c6c2c3779e2ef1941904bf989e2b58f70c483b9d28136b86b28a5"
+  },
+  {
+    "id": "v01-p122",
+    "volume": 1,
+    "archive": "FX戰士久留美 - 卷01.zip",
+    "source_file": "0122.jpg",
+    "dimensions": [
+      870,
+      1280
+    ],
+    "path": "artifacts/pages/v01-p122.jpg",
+    "negative": false,
+    "sha256": "d76cb1560989e0962ed931cc77e5b50e8cd33872b7df74cfe12fcb656d926f58"
+  },
+  {
+    "id": "v01-p129",
+    "volume": 1,
+    "archive": "FX戰士久留美 - 卷01.zip",
+    "source_file": "0129.jpg",
+    "dimensions": [
+      892,
+      1280
+    ],
+    "path": "artifacts/pages/v01-p129.jpg",
+    "negative": true,
+    "sha256": "5928ceb6b6598d252e1a3c43c0a88a805e3e74f31af7740321a5519fa9f60116"
+  },
+  {
+    "id": "v02-p009",
+    "volume": 2,
+    "archive": "FX戰士久留美 - 卷02.zip",
+    "source_file": "009.jpg",
+    "dimensions": [
+      850,
+      1280
+    ],
+    "path": "artifacts/pages/v02-p009.jpg",
+    "negative": true,
+    "sha256": "b7c24421df2a2af5055270ad1bbf853de6bf5c3664d676d95a6506c3c5f88b56"
+  },
+  {
+    "id": "v02-p039",
+    "volume": 2,
+    "archive": "FX戰士久留美 - 卷02.zip",
+    "source_file": "039.jpg",
+    "dimensions": [
+      805,
+      1280
+    ],
+    "path": "artifacts/pages/v02-p039.jpg",
+    "negative": false,
+    "sha256": "69dbb13d70ff28d4efe8f293d7180b4625b020aebebd5019d3d3d5a56d98b57f"
+  },
+  {
+    "id": "v02-p085",
+    "volume": 2,
+    "archive": "FX戰士久留美 - 卷02.zip",
+    "source_file": "085.jpg",
+    "dimensions": [
+      923,
+      1280
+    ],
+    "path": "artifacts/pages/v02-p085.jpg",
+    "negative": false,
+    "sha256": "4130d38654f6c0c26a0e99037eb2f82df79f54eec55ddf6b3d85511c5a941045"
+  },
+  {
+    "id": "v02-p100",
+    "volume": 2,
+    "archive": "FX戰士久留美 - 卷02.zip",
+    "source_file": "100.jpg",
+    "dimensions": [
+      838,
+      1280
+    ],
+    "path": "artifacts/pages/v02-p100.jpg",
+    "negative": false,
+    "sha256": "94a962d5337a9cda37bbe8aeca69ef4c0873f3b74102ffa18a6d4cf453daf3d8"
+  },
+  {
+    "id": "v02-p123",
+    "volume": 2,
+    "archive": "FX戰士久留美 - 卷02.zip",
+    "source_file": "123.jpg",
+    "dimensions": [
+      892,
+      1280
+    ],
+    "path": "artifacts/pages/v02-p123.jpg",
+    "negative": false,
+    "sha256": "d1206afc801ad2926ba23f056cacf50b6980fe72112c803ada911bf1654be3ba"
+  },
+  {
+    "id": "v03-p009",
+    "volume": 3,
+    "archive": "FX戰士久留美 - 卷03.zip",
+    "source_file": "009.jpg",
+    "dimensions": [
+      947,
+      1360
+    ],
+    "path": "artifacts/pages/v03-p009.jpg",
+    "negative": true,
+    "sha256": "5eb6dc2af273ef6d4125459843c8b66d29f8fe6f9bddc06203facb178c3abab3"
+  },
+  {
+    "id": "v03-p048",
+    "volume": 3,
+    "archive": "FX戰士久留美 - 卷03.zip",
+    "source_file": "048.jpg",
+    "dimensions": [
+      1003,
+      1440
+    ],
+    "path": "artifacts/pages/v03-p048.jpg",
+    "negative": false,
+    "sha256": "89d14ac6a28f58951530d42e67238c7cb5d8592c3cee452302c50bee776f87ff"
+  },
+  {
+    "id": "v03-p056",
+    "volume": 3,
+    "archive": "FX戰士久留美 - 卷03.zip",
+    "source_file": "056.jpg",
+    "dimensions": [
+      1003,
+      1440
+    ],
+    "path": "artifacts/pages/v03-p056.jpg",
+    "negative": false,
+    "sha256": "dbf633a78d2c9a5e15949fffd88efddd30afdce133f58e21afdb6c4063a2dbf9"
+  },
+  {
+    "id": "v03-p095",
+    "volume": 3,
+    "archive": "FX戰士久留美 - 卷03.zip",
+    "source_file": "095.jpg",
+    "dimensions": [
+      1003,
+      1440
+    ],
+    "path": "artifacts/pages/v03-p095.jpg",
+    "negative": false,
+    "sha256": "9452b904b947378f617e0fe9f8fc027236d6034086d5916adbf65bbdb2c46c9e"
+  },
+  {
+    "id": "v03-p126",
+    "volume": 3,
+    "archive": "FX戰士久留美 - 卷03.zip",
+    "source_file": "126.jpg",
+    "dimensions": [
+      947,
+      1360
+    ],
+    "path": "artifacts/pages/v03-p126.jpg",
+    "negative": false,
+    "sha256": "abcfc6b45653f478b0126a1abc78a966a03602d44aabcff28118396e97bc1358"
+  },
+  {
+    "id": "v04-p022",
+    "volume": 4,
+    "archive": "FX戰士久留美 - 卷04.zip",
+    "source_file": "0022.jpg",
+    "dimensions": [
+      939,
+      1440
+    ],
+    "path": "artifacts/pages/v04-p022.jpg",
+    "negative": false,
+    "sha256": "99fbde68cae3ff61e7f11dfeba6692779332e1775d7cf59dcb624f5dc1ed0ee0"
+  },
+  {
+    "id": "v04-p061",
+    "volume": 4,
+    "archive": "FX戰士久留美 - 卷04.zip",
+    "source_file": "0061.jpg",
+    "dimensions": [
+      1003,
+      1440
+    ],
+    "path": "artifacts/pages/v04-p061.jpg",
+    "negative": false,
+    "sha256": "f7dc09c59a77a1bb9d4913ae562c72cdb6752bf78c1f32c4e312985bc97bce8e"
+  },
+  {
+    "id": "v04-p067",
+    "volume": 4,
+    "archive": "FX戰士久留美 - 卷04.zip",
+    "source_file": "0067.jpg",
+    "dimensions": [
+      931,
+      1440
+    ],
+    "path": "artifacts/pages/v04-p067.jpg",
+    "negative": false,
+    "sha256": "15eeee0b925b1dfc0c44289e98c34b2804cbf2748b9dba3a54429207f7666aa1"
+  },
+  {
+    "id": "v04-p068",
+    "volume": 4,
+    "archive": "FX戰士久留美 - 卷04.zip",
+    "source_file": "0068.jpg",
+    "dimensions": [
+      939,
+      1440
+    ],
+    "path": "artifacts/pages/v04-p068.jpg",
+    "negative": false,
+    "sha256": "0ed1c8dd025449c70e250d154d7949aa827b95e9193a32e609b4ef4fa486e867"
+  },
+  {
+    "id": "v04-p094",
+    "volume": 4,
+    "archive": "FX戰士久留美 - 卷04.zip",
+    "source_file": "0094.jpg",
+    "dimensions": [
+      792,
+      1149
+    ],
+    "path": "artifacts/pages/v04-p094.jpg",
+    "negative": true,
+    "sha256": "207841e7eda705f03ec6724e4c77fcbc66c32f5bdf56ce007a36ef1097269c11"
+  },
+  {
+    "id": "v05-p047",
+    "volume": 5,
+    "archive": "FX戰士久留美 - 卷05.zip",
+    "source_file": "0047.jpg",
+    "dimensions": [
+      832,
+      1280
+    ],
+    "path": "artifacts/pages/v05-p047.jpg",
+    "negative": false,
+    "sha256": "af85c09ffe9a702337a67bae1baa3f8ec7d8bdd0535326b3b1a406a70817e3cf"
+  },
+  {
+    "id": "v05-p078",
+    "volume": 5,
+    "archive": "FX戰士久留美 - 卷05.zip",
+    "source_file": "0078.jpg",
+    "dimensions": [
+      957,
+      1448
+    ],
+    "path": "artifacts/pages/v05-p078.jpg",
+    "negative": false,
+    "sha256": "a12864d19dc9fba06c682d699405c1164dead9a4bc81297a505b29ea696562c3"
+  },
+  {
+    "id": "v05-p131",
+    "volume": 5,
+    "archive": "FX戰士久留美 - 卷05.zip",
+    "source_file": "0131.jpg",
+    "dimensions": [
+      950,
+      1448
+    ],
+    "path": "artifacts/pages/v05-p131.jpg",
+    "negative": true,
+    "sha256": "0820f06e8e22ee2ee6efc484e790a30f684f47a5e16133994a8df6083e1cbdea"
+  },
+  {
+    "id": "v05-p146",
+    "volume": 5,
+    "archive": "FX戰士久留美 - 卷05.zip",
+    "source_file": "0146.jpg",
+    "dimensions": [
+      951,
+      1448
+    ],
+    "path": "artifacts/pages/v05-p146.jpg",
+    "negative": false,
+    "sha256": "0fcba5a8c05173f13cd3e24cb80d63e4cd1f35ec49aef0932b2a47517a2c8d44"
+  },
+  {
+    "id": "v05-p154",
+    "volume": 5,
+    "archive": "FX戰士久留美 - 卷05.zip",
+    "source_file": "0154.jpg",
+    "dimensions": [
+      950,
+      1448
+    ],
+    "path": "artifacts/pages/v05-p154.jpg",
+    "negative": false,
+    "sha256": "221e8ddc8bf1ffc121634dad86716e6e108b05900e3ce06bfddd62d361d7d98d"
+  },
+  {
+    "id": "v06-p009",
+    "volume": 6,
+    "archive": "FX戰士久留美 - 卷06.zip",
+    "source_file": "0009.jpg",
+    "dimensions": [
+      1043,
+      1600
+    ],
+    "path": "artifacts/pages/v06-p009.jpg",
+    "negative": false,
+    "sha256": "c91de038992b80407d632871eb1b363595c993713e05bac261a5fb11e75a533b"
+  },
+  {
+    "id": "v06-p036",
+    "volume": 6,
+    "archive": "FX戰士久留美 - 卷06.zip",
+    "source_file": "0036.jpg",
+    "dimensions": [
+      939,
+      1440
+    ],
+    "path": "artifacts/pages/v06-p036.jpg",
+    "negative": true,
+    "sha256": "9fb43532a156b94caba55edd5c970bcdbdae1fa037ea3c081e540b1085e4bc55"
+  },
+  {
+    "id": "v06-p069",
+    "volume": 6,
+    "archive": "FX戰士久留美 - 卷06.zip",
+    "source_file": "0069.jpg",
+    "dimensions": [
+      1115,
+      1600
+    ],
+    "path": "artifacts/pages/v06-p069.jpg",
+    "negative": false,
+    "sha256": "13379d695bf8f96dfb309b6c3ea098d4b7981f0ed1cb37273ab46db7c6d4bb31"
+  },
+  {
+    "id": "v06-p089",
+    "volume": 6,
+    "archive": "FX戰士久留美 - 卷06.zip",
+    "source_file": "0089.jpg",
+    "dimensions": [
+      1043,
+      1600
+    ],
+    "path": "artifacts/pages/v06-p089.jpg",
+    "negative": false,
+    "sha256": "b24a0e1642af8c01026b00032778ff2e0d3c02b31a60bf62da1f7f570f8482d0"
+  },
+  {
+    "id": "v06-p135",
+    "volume": 6,
+    "archive": "FX戰士久留美 - 卷06.zip",
+    "source_file": "0135.jpg",
+    "dimensions": [
+      1043,
+      1600
+    ],
+    "path": "artifacts/pages/v06-p135.jpg",
+    "negative": false,
+    "sha256": "d88436d68e52830f5f0a10915bc9b4ddc2f5b5ab322eb5f8d4a1aa99b7970a01"
+  }
+]

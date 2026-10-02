@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>久留美 · 截图审核台</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">K<span> / </span>久留美 <small>截图审核台</small></a><span id="save-status" role="status">正在读取样本…</span><button id="save-project" class="primary" disabled>保存报告到项目</button></header>
+  <div class="shell">
+    <aside><p class="eyebrow">HUMAN REVIEW / 01</p><h1>让每张截图<br>都有明确的判断。</h1><p class="muted">30 页 · 83 条候选<br>原图、对白、裁剪，一次核对。</p>
+      <nav class="steps" aria-label="审核步骤"><button data-tab="rules" class="active">01 <span>确认边界规则</span><b id="rule-progress">0/3</b></button><button data-tab="review">02 <span>逐页审核</span><b id="page-progress">0/30</b></button><button data-tab="report">03 <span>汇总与下一轮</span><b id="candidate-progress">0/83</b></button></nav>
+      <div class="aside-note">每个判断都由你确认。<br>助手初评只作参考，不会自动计入真人结果。</div>
+    </aside>
+    <main id="main"><p>正在加载审核材料…</p></main>
+  </div>
+  <dialog id="viewer"><div><button id="close-viewer" aria-label="关闭大图">关闭 ×</button></div><img id="large-image" alt="审核大图"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
