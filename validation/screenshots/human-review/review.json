@@ -1,0 +1,1414 @@
+{
+  "schema_version": 1,
+  "dataset_id": "screenshots-2026-10-01-30-pages",
+  "rules": {
+    "partial": "recognizable",
+    "reaction": "exclude",
+    "thought": "include"
+  },
+  "pages": {
+    "v01-p009": {
+      "gold": "開什麼玩笑！！是誰說的能漲的！！還我2000萬円！！\n媽媽！？",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v01-p032": {
+      "gold": "不對！媽媽不是我殺的！她一開始來拜託我的話就不會自殺了！傻瓜！傻瓜！！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": false,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v01-p084": {
+      "gold": "果然還是不能就此收手…！！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v01-p122": {
+      "gold": "哎？…等下這是…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": false,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v01-p129": {
+      "gold": "",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": false,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v02-p009": {
+      "gold": "",
+      "notes": "本页无久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v02-p039": {
+      "gold": "嗯…因為我沒有玩這個的才能…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 157.07569999999996,
+      "review_timed": true
+    },
+    "v02-p085": {
+      "gold": "呃…是芽吹…\n太好了…今天不是講FX的話題…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v02-p100": {
+      "gold": "我沒辦法放棄FX了…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v02-p123": {
+      "gold": "不要去！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v03-p009": {
+      "gold": "",
+      "notes": "整页都没有久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v03-p048": {
+      "gold": "不…不是什麼大錢…",
+      "notes": "整页都不是久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v03-p056": {
+      "gold": "漲了好多要是我多買點就好了…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v03-p095": {
+      "gold": "什麼？",
+      "notes": "本页没有久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v03-p126": {
+      "gold": "至少把交稅部分…\n嗯…我是覺得差不多要漲了…不過以防萬一先出金100萬好了…\n我那份錢放這裡了",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v04-p022": {
+      "gold": "我最初聽到這個方法之時還不理解還很輕蔑…\n可現在看來那其實才是最強的戰法…？",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v04-p061": {
+      "gold": "真突然啊……我聽說芽吹在FX上虧了很多…好像還在做一些很危險的事…\n但是如果只是生活上暫時有困難…那樣的話我想應該幫幫她…\n唔…聽起來很不妙吧？",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v04-p067": {
+      "gold": "…那只是我運氣好…罷了…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v04-p068": {
+      "gold": "為什麼芽吹會知道我借錢的事情…？\n不…沒事的…！我說的話沒有錯…！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v04-p094": {
+      "gold": "`",
+      "notes": "本页没有久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v05-p047": {
+      "gold": "FX—外國匯兌保證金交易…！\n…2000萬吧…",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v05-p078": {
+      "gold": "完成…！\n120.05元限價止盈訂單…\n大行情的話區區117元給我輕鬆突破吧！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v05-p131": {
+      "gold": "",
+      "notes": "本页没有久留美台词",
+      "uncertain": true,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v05-p146": {
+      "gold": "眼睛眼睛～\n嗚嗚嗚嗚嗚～\n嗚哇燙燙燙",
+      "notes": "本页仅有拟声词，没有截图的意义。",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v05-p154": {
+      "gold": "現在的市場…！\n我放手的理由是—",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": false,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v06-p009": {
+      "gold": "如果只是暫時性的\n…有可能！上漲趨勢中最後的瘋狂…沒有道理的太暴漲…！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v06-p036": {
+      "gold": "",
+      "notes": "本页无久留美的台词",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v06-p069": {
+      "gold": "我想買…！我想買…！！我想買…！！！\n實現…夢想…！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v06-p089": {
+      "gold": "我的盤感已經出現了偏差—\n果然還是不應該止損的",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    },
+    "v06-p135": {
+      "gold": "放心吧！我現在決勝的貨幣漲了的話就準備引退了！\n做多歐元瑞郎300手！",
+      "notes": "",
+      "uncertain": false,
+      "confirmed": true,
+      "review_seconds": 0,
+      "review_timed": false
+    }
+  },
+  "candidates": {
+    "v01-p009-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v01-p009-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "媽媽！？"
+      ],
+      "notes": "台词截图不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v01-p032-c01": {
+      "role": "correct",
+      "quote_status": "incorrect",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "不對！媽媽不是我殺的！她一開始來拜託我的話就不會自殺了！傻瓜！傻瓜！！"
+      ],
+      "notes": "台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v01-p032-c02": {
+      "role": "correct",
+      "quote_status": "incorrect",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "不對！媽媽不是我殺的！她一開始來拜託我的話就不會自殺了！傻瓜！傻瓜！！"
+      ],
+      "notes": "台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v01-p084-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "果然還是不能就此收手…！！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v01-p122-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "direct",
+      "matches": [
+        "哎？…等下這是…"
+      ],
+      "notes": "B把相关内容也截进去了，这才是对的",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p009-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p009-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p039-c01": {
+      "role": "correct",
+      "quote_status": "incorrect",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "嗯…因為我沒有玩這個的才能…"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p039-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "嗯…因為我沒有玩這個的才能…"
+      ],
+      "notes": "",
+      "duplicate_of": "v02-p039-c01",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p039-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "并非久留美的台词，而是其他人对久留美说的台词。",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p039-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "这是另一个角色",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p039-c05": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "这是另一个角色",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p085-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "呃…是芽吹…"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p085-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "unusable",
+      "matches": [
+        "太好了…今天不是講FX的話題…"
+      ],
+      "notes": "B把另一个无关分镜纳入了。",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p100-c01": {
+      "role": "correct",
+      "quote_status": "incorrect",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [
+        "我沒辦法放棄FX了…"
+      ],
+      "notes": "没有把完整的分镜格子纳入，少了台词“放弃fx了”",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p100-c02": {
+      "role": "correct",
+      "quote_status": "incorrect",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [
+        "我沒辦法放棄FX了…"
+      ],
+      "notes": "没有把完整的分镜格子纳入，少了台词“放弃fx了”",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p123-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "不要去！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v02-p123-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "完全没有截取相应的台词",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p009-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p009-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p009-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p009-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p048-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p048-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "v03-p048-c01",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p048-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "v03-p048-c01",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p048-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p056-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "漲了好多要是我多買點就好了…"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p056-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "漲了好多要是我多買點就好了…"
+      ],
+      "notes": "",
+      "duplicate_of": "v03-p056-c01",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p095-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p095-c02": {
+      "role": "mixed_speakers",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p095-c03": {
+      "role": "mixed_speakers",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p126-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "嗯…我是覺得差不多要漲了…不過以防萬一先出金100萬好了…"
+      ],
+      "notes": "台词截取不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p126-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p126-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p126-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v03-p126-c05": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p022-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "我最初聽到這個方法之時還不理解還很輕蔑…"
+      ],
+      "notes": "台词截取不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p022-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "direct",
+      "matches": [
+        "我最初聽到這個方法之時還不理解還很輕蔑…"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p022-c03": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "可現在看來那其實才是最強的戰法…？"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p022-c04": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "可現在看來那其實才是最強的戰法…？"
+      ],
+      "notes": "",
+      "duplicate_of": "v04-p022-c03",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p022-c05": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p061-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p061-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p061-c03": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "唔…聽起來很不妙吧？"
+      ],
+      "notes": "台词截取不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p067-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "…那只是我運氣好…罷了…"
+      ],
+      "notes": "台词截取不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p067-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p068-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "不…沒事的…！我說的話沒有錯…！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p068-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p068-c03": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "不…沒事的…！我說的話沒有錯…！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p094-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v04-p094-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p047-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "FX—外國匯兌保證金交易…！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p047-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "…2000萬吧…"
+      ],
+      "notes": "多截取了上面的分镜",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "direct",
+      "matches": [
+        "完成…！",
+        "120.05元限價止盈訂單…"
+      ],
+      "notes": "A截图没有可辨认的久留美",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "v05-p078-c01",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c03": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c04": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c05": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "fix",
+      "matches": [
+        "大行情的話區區117元給我輕鬆突破吧！"
+      ],
+      "notes": "台词截图不完全",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p078-c06": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "fix",
+      "matches": [
+        "大行情的話區區117元給我輕鬆突破吧！"
+      ],
+      "notes": "台词截图不完全",
+      "duplicate_of": "v05-p078-c05",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p131-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p131-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p131-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p131-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p146-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "direct",
+      "matches": [
+        "嗚嗚嗚嗚嗚～"
+      ],
+      "notes": "本页仅有拟声词，没有截图的意义。",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p146-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "unusable",
+      "B": "direct",
+      "matches": [
+        "嗚嗚嗚嗚嗚～"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p154-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "現在的市場…！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v05-p154-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "我放手的理由是—"
+      ],
+      "notes": "台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p009-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "如果只是暫時性的"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p009-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "…有可能！上漲趨勢中最後的瘋狂…沒有道理的太暴漲…！"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p036-c01": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p036-c02": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p036-c03": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p036-c04": {
+      "role": "wrong",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p069-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "我想買…！我想買…！！我想買…！！！"
+      ],
+      "notes": "台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p069-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p069-c03": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p069-c04": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p089-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "我的盤感已經出現了偏差—"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p089-c02": {
+      "role": "no_visible_character",
+      "quote_status": "na",
+      "A": "unusable",
+      "B": "unusable",
+      "matches": [],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p089-c03": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "direct",
+      "B": "direct",
+      "matches": [
+        "果然還是不應該止損的"
+      ],
+      "notes": "",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p135-c01": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "direct",
+      "matches": [
+        "放心吧！我現在決勝的貨幣漲了的話就準備引退了！"
+      ],
+      "notes": "B的台词截图更完全。A的台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    },
+    "v06-p135-c02": {
+      "role": "correct",
+      "quote_status": "correct",
+      "A": "fix",
+      "B": "fix",
+      "matches": [
+        "做多歐元瑞郎300手！"
+      ],
+      "notes": "台词截图不完整",
+      "duplicate_of": "",
+      "modification_seconds": "",
+      "modification_result": "",
+      "repair_path": "",
+      "confirmed": true
+    }
+  },
+  "updated_at": "2026-10-02T11:38:28.215Z",
+  "exported_at": "2026-10-02T11:38:28.216Z",
+  "reviewer": "human"
+}
