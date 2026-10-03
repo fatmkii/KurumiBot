@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "page_id": "v01-p002",
+    "id": "auto-02",
+    "bbox": [
+      95.72653298849589,
+      332,
+      917.9487626631183,
+      648.0965246940799
+    ],
+    "quote": "我已經完全\n看懂走勢了！接下來是\n上漲！",
+    "speaker": "confirmed",
+    "notes": "",
+    "box_reviewed": true,
+    "quote_source": "auto",
+    "ocr_status": "stale",
+    "ocr_text": "",
+    "emotion_tags": [],
+    "meaning": "",
+    "scenarios": "",
+    "annotation_source": "ai",
+    "metadata_status": "pending",
+    "quote_simplified": "我已经完全\n看懂走势了！接下来是\n上涨！",
+    "crop_path": "corrections/crops/v01-p002/1/auto-02.png"
+  },
+  {
+    "page_id": "v01-p005",
+    "id": "auto-01",
+    "bbox": [
+      88.02568574004121,
+      65.19277202479647,
+      936.3713781335852,
+      305.3252496293642
+    ],
+    "quote": "所以是\n怎麼回事啊！？",
+    "speaker": "confirmed",
+    "notes": "泡邻近手写拟声词「びくっ」，依规则反应类不单独作为素材。",
+    "box_reviewed": true,
+    "quote_source": "auto",
+    "ocr_status": "stale",
+    "ocr_text": "",
+    "emotion_tags": [],
+    "meaning": "",
+    "scenarios": "",
+    "annotation_source": "ai",
+    "metadata_status": "pending",
+    "quote_simplified": "所以是\n怎么回事啊！？",
+    "crop_path": "corrections/crops/v01-p005/3/auto-01.png"
+  }
+]
