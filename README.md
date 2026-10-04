@@ -141,7 +141,9 @@ bash deploy/install.sh
 脚本不会自动开放防火墙；访问后台时需确保访问端到该地址的 TCP 10963 可达。
 Bot 只需要出站 HTTPS / WebSocket 连接。
 
-脚本安装 Supervisor、uv 和 Python 3.12，按 `uv.lock` 安装生产依赖，校验素材压缩包的 SHA256，
+脚本仅在系统依赖缺失时调用 apt 安装，已安装 ca-certificates、curl、Supervisor 时跳过 apt，
+避免被系统中其他待配置的软件包阻塞。依赖安装失败则停止并保留 apt/dpkg 错误，需先修复系统软件包状态。
+脚本安装 uv 和 Python 3.12，按 `uv.lock` 安装生产依赖，校验素材压缩包的 SHA256，
 自动解压到 `data/materials/library-v1`，并将 `.env` 中原有默认素材及兜底路径迁移到该目录。
 已有默认素材数据库的人工修改通过 SQLite backup 保留；自定义素材路径则仅校验，不迁移。
 之后检查必填密钥、已启用素材的图片、兜底图片及后台网卡地址，生成后台密码与 Supervisor 配置，

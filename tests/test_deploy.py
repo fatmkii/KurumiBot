@@ -5,6 +5,7 @@ import pwd
 import shlex
 import shutil
 import sqlite3
+import subprocess
 from unittest.mock import MagicMock
 import zipfile
 
@@ -124,3 +125,31 @@ def test_tracked_release_package_contains_complete_runtime_library(tmp_path):
     finally:
         library.close()
     assert (target / "images/v06-p088-manual-9c6ecdf5-9300-4006-8a48-c51279382a9e.png").is_file()
+
+
+@pytest.mark.parametrize("missing,apt_exit", [("", 0), ("curl", 0), ("curl", 1)])
+def test_system_dependencies_skip_apt_when_installed(tmp_path, missing, apt_exit):
+    # 执行脚本中的真实依赖安装段，模拟 dpkg 状态及 apt 失败；不修改本机系统。
+    block = (ROOT / "deploy/install.sh").read_text().split("sudo -v\n", 1)[1].split("\nif command -v uv", 1)[0]
+    commands = tmp_path / "commands"
+    commands.mkdir()
+    query = commands / "dpkg-query"
+    query.write_text('#!/bin/bash\nif [[ "${@: -1}" == "$TEST_MISSING" ]]; then exit 1; fi\nprintf "install ok installed"\n')
+    sudo = commands / "sudo"
+    sudo.write_text('#!/bin/bash\nprintf "%s\\n" "$*" >> "$TEST_APT_LOG"\nexit "$TEST_APT_EXIT"\n')
+    query.chmod(0o755)
+    sudo.chmod(0o755)
+    log = tmp_path / "apt.log"
+    env = {**os.environ, "PATH": str(commands) + ":" + os.environ["PATH"],
+           "TEST_MISSING": missing, "TEST_APT_LOG": str(log), "TEST_APT_EXIT": str(apt_exit)}
+    result = subprocess.run(["bash", "-c", "set -euo pipefail\n" + block], env=env, capture_output=True, text=True)
+    if not missing:
+        assert result.returncode == 0
+        assert not log.exists()
+        assert "跳过 apt" in result.stdout
+    elif apt_exit:
+        assert result.returncode == 1
+        assert "apt/dpkg" in result.stderr
+    else:
+        assert result.returncode == 0
+        assert log.read_text().splitlines() == ["apt-get update", "apt-get install -y curl"]

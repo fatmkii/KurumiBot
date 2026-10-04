@@ -21,8 +21,20 @@ if [[ ! -f .env ]]; then
 fi
 chmod 600 .env
 sudo -v
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl supervisor
+missing_packages=()
+for package in ca-certificates curl supervisor; do
+    if [[ "$(dpkg-query -W -f='${Status}' "$package" 2>/dev/null)" != 'install ok installed' ]]; then
+        missing_packages+=("$package")
+    fi
+done
+if (( ${#missing_packages[@]} )); then
+    if ! sudo apt-get update || ! sudo apt-get install -y "${missing_packages[@]}"; then
+        echo '系统依赖安装失败。请先处理上方 apt/dpkg 错误，再重新执行部署脚本。' >&2
+        exit 1
+    fi
+else
+    echo '系统依赖已安装，跳过 apt。'
+fi
 
 if command -v uv >/dev/null 2>&1; then
     uv_bin="$(command -v uv)"
