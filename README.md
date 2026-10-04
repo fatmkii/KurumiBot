@@ -123,10 +123,61 @@ QQ 客户端显示及匹配趣味性需要人工私聊及群 @ 验证。
 2026-10-04 管理后台验证完成，Bot、API 及浏览器测试共 49 项通过。
 正式数据页面已通过真实浏览器只读检查，桌面及 375px 手机截图位于本机 `data/admin-preview/`。
 
-Ubuntu 部署需复制 `kurumibot/`、`pyproject.toml`、`uv.lock`、`.python-version`、完整素材库及兜底图片，
-其中 `kurumibot/static/` 也需完整复制；单独配置 `.env`，执行 `uv sync --locked --no-dev`。
-Supervisor 配置模板见 `deploy/kurumibot.conf`，按服务器安装位置调整路径后加载。
-Bot 通过出站 HTTPS / WebSocket 连接；管理后台单独监听局域网端口 10963。
+### Ubuntu 一键部署
+
+适用于运行 systemd 的 Ubuntu 22.04 / 24.04 服务器。使用有 sudo 权限的普通用户克隆并运行，
+Bot 与后台也使用该用户；项目目录需允许该用户读写。首次部署：
+
+```bash
+git clone <你的仓库地址> KurumiBot
+cd KurumiBot
+cp .env.example .env
+nano .env
+# 填好 QQ_APP_ID、QQ_APP_SECRET、DEEPSEEK_API_KEY 后执行：
+bash deploy/install.sh
+```
+
+若服务器没有 `192.168.x.x` 网卡，在 `.env` 增加 `KURUMI_ADMIN_HOST=服务器实际私有IPv4`。
+脚本不会自动开放防火墙；访问后台时需确保访问端到该地址的 TCP 10963 可达。
+Bot 只需要出站 HTTPS / WebSocket 连接。
+
+脚本安装 Supervisor、uv 和 Python 3.12，按 `uv.lock` 安装生产依赖，校验素材压缩包的 SHA256，
+自动解压到 `data/materials/library-v1`，并将 `.env` 中原有默认素材及兜底路径迁移到该目录。
+已有默认素材数据库的人工修改通过 SQLite backup 保留；自定义素材路径则仅校验，不迁移。
+之后检查必填密钥、已启用素材的图片、兜底图片及后台网卡地址，生成后台密码与 Supervisor 配置，
+启动 `kurumibot` 和 `kurumibot-admin`，设为开机自启及异常退出自动重启。
+uv 安装方式参考 [官方安装说明](https://docs.astral.sh/uv/getting-started/installation/)。
+
+访问脚本输出的 `http://服务器IP:10963`，用户名默认 `admin`；密码查看本机 `.env` 的
+`KURUMI_ADMIN_PASSWORD`。`.env` 权限设为 600，日志不打印密钥或密码。
+Supervisor 的 RUNNING 表示进程已启动；QQ 是否连通还需查看 Bot 日志中的 `ready`，然后发送私聊或群 @ 测试。
+
+```bash
+sudo supervisorctl status kurumibot kurumibot-admin
+sudo supervisorctl tail kurumibot
+sudo supervisorctl tail kurumibot-admin
+# 后台修改连接配置后，重启 Bot 生效：
+sudo supervisorctl restart kurumibot
+# 停止两个进程：
+sudo supervisorctl stop kurumibot kurumibot-admin
+```
+
+更新代码后再次运行脚本即可重新同步依赖并重启两个服务：
+
+```bash
+git pull --ff-only
+bash deploy/install.sh
+```
+
+重复部署不会覆盖 `data/materials/library-v1`，不会重置后台密码，也不会清空历史记录。
+升级素材包需另行迁移，脚本不会自动用新包替换已经编辑过的运行库。
+部署前勿同时手动运行另一份 Bot。请备份 `.env` 和整个 `data/`，不要只备份仓库内的发布数据库。
+Supervisor 配置安装在 `/etc/supervisor/conf.d/kurumibot.conf`，两个日志位于
+`/var/log/kurumibot.log` 和 `/var/log/kurumibot-admin.log`，每个日志最多 10 MB、保留 3 份轮转文件。
+
+`.gitignore` 排除 `.env` 及其备份、虚拟环境、Python 缓存、运行数据、日志、SQLite 临时文件、
+原漫画及解压后的发布图片；`.env.example`、`uv.lock`、部署脚本、发布 ZIP 与校验文件保留在仓库。
+因此新服务器无需手工上传图片，也不会把后台编辑和对话记录带入版本控制。
 
 ## 管理后台
 
@@ -170,4 +221,4 @@ uv run --locked --env-file .env python -m kurumibot.admin --host 172.19.124.247
 
 修改素材会使发布包原有的数据库校验值失效；`catalog.json` 仍是发布快照，不会同步更新。
 不要重新解压旧发布包覆盖编辑后的库。迁移时应备份当前 SQLite，Bot 与管理页使用相同的素材路径和历史路径。
-Supervisor 模板同时包含 `kurumibot` 与 `kurumibot-admin` 两个服务，部署时分别管理。
+一键部署会为 `kurumibot` 与 `kurumibot-admin` 生成 Supervisor 配置，两个服务可分别管理。
