@@ -1,0 +1,12 @@
+{"time": "2026-10-03T12:18:56.962804+00:00", "event": "probe_start", "python": "3.12.3", "sdk": "1.2.2", "duration_seconds": 120, "image": "/home/fat/projects/KurumiBot/pics_sample/1.png", "image_exists": true}
+{"time": "2026-10-03T12:18:57.151356+00:00", "event": "token_success", "seconds": 0.188}
+{"time": "2026-10-03T12:18:57.359218+00:00", "event": "http_response", "method": "GET", "http_status": 200, "trace_id": "0ee15d1a340867e5470a831f9f1069ba", "path": "/gateway", "business_code": null}
+{"time": "2026-10-03T12:18:57.359308+00:00", "event": "gateway_success", "host": "api.sgroup.qq.com"}
+{"time": "2026-10-03T12:18:57.651461+00:00", "event": "heartbeat_interval", "seconds": 33.0}
+{"time": "2026-10-03T12:18:57.767767+00:00", "event": "connected", "connection_number": 1, "elapsed_seconds": 0.805, "recovery_seconds": null}
+{"time": "2026-10-03T12:18:57.767842+00:00", "event": "ready"}
+{"time": "2026-10-03T12:19:29.881871+00:00", "event": "heartbeat_ack", "count": 1}
+{"time": "2026-10-03T12:20:02.901593+00:00", "event": "heartbeat_ack", "count": 2}
+{"time": "2026-10-03T12:20:36.233072+00:00", "event": "heartbeat_ack", "count": 3}
+{"time": "2026-10-03T12:20:44.761168+00:00", "event": "ignored_event", "event_type": "C2C_MESSAGE_CREATE"}
+{"time": "2026-10-03T12:20:56.316733+00:00", "event": "probe_end", "connections": 1, "heartbeat_acks": 3, "received": 0, "sent": 0, "elapsed_seconds": 120.415}

@@ -49,7 +49,7 @@ def references():
     return blocks
 
 
-def request(connection, blocks, prompt, validate=False):
+def request(connection, blocks, prompt, validate=False, validator=None):
     attempts = []
     for attempt in range(2):
         start = time.perf_counter()
@@ -67,6 +67,8 @@ def request(connection, blocks, prompt, validate=False):
                     raise ValueError("candidates missing")
                 if validate:
                     normalize(parsed["candidates"])
+                if validator:
+                    validator(parsed["candidates"])
                 record["parsed"] = parsed
         except Exception as error:
             record["error_type"] = type(error).__name__

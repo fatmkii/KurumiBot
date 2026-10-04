@@ -43,8 +43,8 @@ def ocr(image):
     def validate(data):
         if not isinstance(data.get('quote'), str) or not data['quote'].strip() or len(data['quote']) > 10000 or type(data.get('uncertain')) is not bool:
             raise ValueError('OCR quote missing')
-    return request(image, '''这是人工确认的久留美素材裁剪图。识别她的完整繁体原台词，保持原字与标点，多气泡按漫画阅读顺序合并。
-仅提取久留美的对白或明确内心独白，排除他人对白、旁白、拟声词。不要补写看不清或裁剪之外的文字。
+    return request(image, '''这是人工确认用于聊天回复的漫画素材裁剪图，允许所有角色，不限定久留美。识别框内主角对应的完整繁体目标台词，保持原字与标点，多气泡按漫画阅读顺序合并。
+保留目标说话人的对白或明确内心独白；若框内明显是完整多人物接话片段，按阅读顺序保留。排除无关旁白、背景文字和拟声词，不因角色不是久留美而漏掉台词。不要补写看不清或裁剪之外的文字。
 若角色或文字归属不确定、文字不完整则 uncertain=true。无可识别台词返回空 quote。
 仅输出 JSON {"quote":"繁体原文","uncertain":false}。''', validate)
 
@@ -60,7 +60,7 @@ def describe(image, quote, volume=None):
         context_path = store.HERE / 'volume-context' / f'{volume:02d}.md'
         if context_path.exists():
             background += '\n\n' + context_path.read_text().split('## 核对来源')[0]
-    return request(image, background + '\n\n' + '''结合裁剪图的表情、动作与下方台词，生成用于聊天选图的简体中文说明。
+    return request(image, background + '\n\n' + '''结合裁剪图的表情、动作与下方台词，生成用于娱乐聊天选图的简体中文说明。素材允许所有角色，不能将其他角色的台词或情绪套成久留美的经历；优先说明短句的吐槽、反问、夸张情绪及一针见血接话的潜力。
 台词以提供的文本为准，不能改写或凭空补充剧情。emotion_tags 是1至6个简短情绪标签；meaning 解释字面含义及语气；
 scenarios 说明适合回复什么样的话、情绪或玩梗场景，必要时指出不适用场景。不要把推测的漫画剧情写成事实。
 只输出 JSON {"emotion_tags":["惊讶"],"meaning":"台词含义与语气","scenarios":"适用聊天场景"}。

@@ -1,0 +1,20 @@
+{"time": "2026-10-03T12:34:45.423538+00:00", "event": "probe_start", "python": "3.12.3", "sdk": "1.2.2", "duration_seconds": 600, "image": "/home/fat/projects/KurumiBot/pics_sample/1.png", "image_exists": true}
+{"time": "2026-10-03T12:34:45.592452+00:00", "event": "token_success", "seconds": 0.169}
+{"time": "2026-10-03T12:34:45.856598+00:00", "event": "http_response", "method": "GET", "http_status": 200, "trace_id": "b20e3f9051eda21dd8d5cbcc2fb14c9b", "path": "/gateway", "business_code": null}
+{"time": "2026-10-03T12:34:45.856697+00:00", "event": "gateway_success", "host": "api.sgroup.qq.com"}
+{"time": "2026-10-03T12:34:46.081173+00:00", "event": "heartbeat_interval", "seconds": 33.0}
+{"time": "2026-10-03T12:34:46.208271+00:00", "event": "connected", "connection_number": 1, "elapsed_seconds": 0.784, "recovery_seconds": null}
+{"time": "2026-10-03T12:34:46.208326+00:00", "event": "ready"}
+{"time": "2026-10-03T12:35:18.965927+00:00", "event": "heartbeat_ack", "count": 1}
+{"time": "2026-10-03T12:35:19.445307+00:00", "event": "c2c_received", "chat_scope": "c2c", "chat_id": "00eb1bf41763", "user": "00eb1bf41763", "message_id": "693183479a42", "content": "测试", "platform_time": "2026-10-03T20:35:17+08:00"}
+{"time": "2026-10-03T12:35:19.716726+00:00", "event": "http_response", "method": "POST", "http_status": 200, "trace_id": "5c482dbe5a0cc54c82d5f4278a313fff", "path": "/v2/users/<redacted>/upload_prepare", "business_code": null}
+{"time": "2026-10-03T12:35:19.960850+00:00", "event": "http_response", "method": "PUT", "http_status": 200, "trace_id": null, "path": "<media-transfer>"}
+{"time": "2026-10-03T12:35:20.079245+00:00", "event": "http_response", "method": "POST", "http_status": 200, "trace_id": "1198d84e6bd8eb8babb875f59adad96d", "path": "/v2/users/<redacted>/upload_part_finish", "business_code": null}
+{"time": "2026-10-03T12:35:20.562343+00:00", "event": "http_response", "method": "POST", "http_status": 200, "trace_id": "279921bba931dc4f77e1e5834be75d7c", "path": "/v2/users/<redacted>/files", "business_code": null}
+{"time": "2026-10-03T12:35:20.562438+00:00", "event": "upload_success", "chat_scope": "c2c", "chat_id": "00eb1bf41763", "user": "00eb1bf41763", "message_id": "693183479a42", "seconds": 1.117}
+{"time": "2026-10-03T12:35:21.041739+00:00", "event": "http_response", "method": "POST", "http_status": 200, "trace_id": "40c7f47a3a90aeefdc8c9954330c1b7d", "path": "/v2/users/<redacted>/messages", "business_code": null}
+{"time": "2026-10-03T12:35:21.041916+00:00", "event": "send_success", "chat_scope": "c2c", "chat_id": "00eb1bf41763", "user": "00eb1bf41763", "message_id": "693183479a42", "seconds": 0.479, "sent_message_id": "96cece4916d9", "client_visibility": "unverified"}
+{"time": "2026-10-03T12:35:52.012852+00:00", "event": "heartbeat_ack", "count": 2}
+{"time": "2026-10-03T12:36:25.003039+00:00", "event": "heartbeat_ack", "count": 3}
+{"time": "2026-10-03T12:36:58.032582+00:00", "event": "heartbeat_ack", "count": 4}
+{"time": "2026-10-03T12:37:28.014110+00:00", "event": "probe_end", "connections": 1, "heartbeat_acks": 4, "received": 1, "sent": 1, "elapsed_seconds": 164.834}

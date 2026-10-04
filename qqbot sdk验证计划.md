@@ -94,3 +94,17 @@ uv run --env-file .env python qqbot_probe.py
 - 结论标记为“核心接入及稳定性通过”“核心接入通过、稳定性待解决”或“核心接入受阻”，附证据及后续处理项。
 
 通过后再将固定图片替换为AI选出的图片。若受阻，先明确需要调整的账号资格、平台配置或SDK集成方式，再决定是否修改项目需求。
+
+## 6. 2026-10-03 实际执行记录
+
+本轮按用户要求先验证私聊，尚未将机器人加入测试QQ群。**QQ Bot 连通性及私聊本地图片回复已通过**：获取 token 成功、Gateway HTTP 200、WebSocket READY、心跳 ACK；接收到私聊“测试”后，使用 `pics_sample/1.png` 完成本地分片上传及私聊图片回复，用户确认 QQ 客户端正常显示。
+
+- 环境：Python 3.12.3、uv 0.11.16、qqbot-agent-sdk 1.2.2，已保存依赖锁文件。
+- 凭据使用现有 `.env` 的 `QQ_APP_ID`、`QQ_APP_SECRET`，脚本同时兼容本计划原定变量名。
+- 私聊上传耗时 1.117 秒，发送耗时 0.479 秒；各上传步骤和发送接口均返回 HTTP 200。
+- 无需本轮额外部署公网入站服务、回调或公网图片 URL，使用出站 HTTPS/WebSocket 和本地文件上传完成私聊回复。
+- 初次 AppID 错误导致 `100007 / appid invalid`；修正后已解除。
+
+产物：[最小验证脚本](validation/qqbot/qqbot_probe.py)、[依赖锁文件](validation/qqbot/uv.lock)、[运行说明](validation/qqbot/README.md)、[详细验证结果](validation/qqbot/验证结果.md)、[连通性日志](validation/qqbot/connectivity.jsonl)、[私聊上传及发送日志](validation/qqbot/c2c-upload.jsonl)。日志脱敏；客户端可见性依据用户确认，未收集截图。
+
+本次通过的是私聊链路。原计划的目标群准入、群 @ 回图、连续 10 条、不同用户、PNG/JPG、异常场景及 30 分钟稳定性和意外断线重连仍待验证，不能据此标记“核心接入及稳定性通过”。

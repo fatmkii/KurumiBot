@@ -38,7 +38,9 @@ def progress():
         rows.append({**page, "auto_status": result.get("status", "pending"),
                      "auto_count": len(result.get("items", [])), "reviewed": correction.get("reviewed", False),
                      "saved": bool(correction["revision"]), "item_count": len(correction.get("items", []))})
-    return {"pages": rows, "materials": materials, "enrichment": enrichment.progress(),
+    reply_job = read(HERE / "artifacts/reply-selection/job.json", {})
+    external_running |= reply_job.get("status") == "running"
+    return {"pages": rows, "materials": materials, "enrichment": enrichment.progress(), "reply_prediction": reply_job,
             "job_running": bool(JOB and JOB.is_alive()) or external_running}
 
 
@@ -103,7 +105,7 @@ class Handler(SimpleHTTPRequestHandler):
                 with LOCK:
                     self.respond(export_report())
             elif path == "/api/auto":
-                from auto_v2 import run
+                from reply_selection import run
                 with LOCK:
                     if progress()["job_running"]:
                         self.respond({"running": True})
