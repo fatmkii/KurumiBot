@@ -23,6 +23,8 @@ UV_CACHE_DIR=/tmp/kurumibot-uv-cache uv run --project validation/screenshots pyt
 5. “素材状态清单”显示全部自动候选与人工新增素材的框体、OCR、标签、含义及场景完成情况。支持筛选待处理、失败、信息齐全素材，点击素材按钮跳转。
 6. “生成报告与素材清单”保存修正报告、全部框已复核素材清单和信息齐全清单，用于下一轮建库。
 
+正式运行素材库现已打包至项目根目录 `materials/library-v1/`，部署包为 `materials/library-v1.zip`。库包含裁剪图片、SQLite 数据库及 JSON 清单；读取格式与重新发布命令见 `materials/README.md`。工作台后续修改需重新发布才会进入运行库。
+
 未保存修改缓存于当前浏览器，切页后可以恢复；保存到项目后可在其他浏览器或重启后继续。保存从原图生成 PNG，并保留逐页 JSON 和各修正版本，不修改原漫画。
 
 ## 状态与人工内容保护

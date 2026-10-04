@@ -2,3 +2,4 @@ comics/
 .env
 validation/qqbot/.venv/
 validation/qqbot/__pycache__/
+materials/library-v1/images/

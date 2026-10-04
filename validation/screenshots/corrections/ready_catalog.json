@@ -110,6 +110,43 @@
   },
   {
     "page_id": "v01-p007",
+    "id": "auto-01",
+    "bbox": [
+      84,
+      50,
+      945.1869204489996,
+      371.8577881462666
+    ],
+    "quote": "我回來了～\n好黑！\n垃圾也沒拿出去…",
+    "speaker": "confirmed",
+    "notes": "",
+    "box_reviewed": true,
+    "quote_source": "ocr",
+    "ocr_status": "recognized",
+    "ocr_text": "我回來了～\n好黑！\n垃圾也沒拿出去…",
+    "emotion_tags": [
+      "无奈",
+      "傻眼",
+      "失望",
+      "吐槽"
+    ],
+    "meaning": "角色回家后发出日常感叹：先说“我回来了～”，随即发现屋内很暗，又注意到垃圾没拿出去。语气从轻松转为吐槽与无奈，属于生活琐事带来的小抱怨。",
+    "scenarios": "适合回复朋友抱怨回家发现没人、灯没开、家务没做、室友/家人不靠谱等日常场景；也可用于吐槽自己或他人“说好要做的事又忘了”。不适用于严肃交易、投资盈亏或剧情推理场景。",
+    "annotation_source": "ai",
+    "metadata_status": "generated",
+    "quote_simplified": "我回来了～\n好黑！\n垃圾也没拿出去…",
+    "ocr_bbox": [
+      84,
+      50,
+      945.1869204489996,
+      371.8577881462666
+    ],
+    "ocr_error": "",
+    "metadata_error": "",
+    "crop_path": "corrections/crops/v01-p007/11/auto-01.png"
+  },
+  {
+    "page_id": "v01-p007",
     "id": "auto-03",
     "bbox": [
       0,
@@ -143,7 +180,7 @@
     ],
     "ocr_error": "",
     "metadata_error": "",
-    "crop_path": "corrections/crops/v01-p007/7/auto-03.png"
+    "crop_path": "corrections/crops/v01-p007/11/auto-03.png"
   },
   {
     "page_id": "v01-p008",
@@ -777,6 +814,43 @@
     "crop_path": "corrections/crops/v01-p037/5/auto-01.png"
   },
   {
+    "page_id": "v01-p041",
+    "id": "auto-01",
+    "bbox": [
+      54.41771656078288,
+      55.66276503882949,
+      912.7350804439498,
+      399.5333399298552
+    ],
+    "quote": "放棄FX",
+    "speaker": "confirmed",
+    "notes": "",
+    "box_reviewed": true,
+    "quote_source": "human",
+    "ocr_status": "confirmed",
+    "ocr_text": "放棄",
+    "emotion_tags": [
+      "惊讶",
+      "崩溃",
+      "决绝",
+      "戏剧化"
+    ],
+    "meaning": "台词为“放棄FX”，即“放弃FX（外汇交易）”。配合画面中夸张的冲击线、飘散的碎屑和人物瞪大眼睛、略带茫然又似下定决心的表情，语气带有一种戏剧性的、被逼到极限后斩钉截铁宣布放弃的意味，而非平静的陈述。",
+    "scenarios": "适合在朋友发誓要戒掉某个烧钱爱好、游戏或投资时，用来夸张地扮演“彻底退坑”的角色；也适合在有人反复亏钱、熬夜伤身时，作为一针见血的接话，表达“你早该放弃”的吐槽。不适用于真正严肃劝人放弃重要人生目标的场景，因为这里带有强烈的二次元夸张和玩梗色彩。",
+    "annotation_source": "ai",
+    "metadata_status": "generated",
+    "quote_simplified": "放弃FX",
+    "ocr_bbox": [
+      54.41771656078288,
+      55.66276503882949,
+      912.7350804439498,
+      399.5333399298552
+    ],
+    "ocr_error": "",
+    "metadata_error": "",
+    "crop_path": "corrections/crops/v01-p041/14/auto-01.png"
+  },
+  {
     "page_id": "v01-p042",
     "id": "auto-02",
     "bbox": [
@@ -811,7 +885,7 @@
     ],
     "ocr_error": "",
     "metadata_error": "",
-    "crop_path": "corrections/crops/v01-p042/5/auto-02.png"
+    "crop_path": "corrections/crops/v01-p042/7/auto-02.png"
   },
   {
     "page_id": "v01-p043",
@@ -4885,7 +4959,7 @@
     ],
     "ocr_error": "",
     "metadata_error": "",
-    "crop_path": "corrections/crops/v03-p017/5/manual-478821c4-8c2a-43e3-975c-a4d656bce7d7.png"
+    "crop_path": "corrections/crops/v03-p017/6/manual-478821c4-8c2a-43e3-975c-a4d656bce7d7.png"
   },
   {
     "page_id": "v03-p026",
@@ -8108,7 +8182,7 @@
     ],
     "ocr_error": "",
     "metadata_error": "",
-    "crop_path": "corrections/crops/v06-p007/5/reply-02.png"
+    "crop_path": "corrections/crops/v06-p007/6/reply-02.png"
   },
   {
     "page_id": "v06-p008",
