@@ -100,7 +100,7 @@ class Handler(SimpleHTTPRequestHandler):
                 if not 0 < length < 10000:
                     raise ValueError("处理请求大小无效")
                 payload = json.loads(self.rfile.read(length))
-                self.respond(enrichment.start(list(PAGES.values()), payload.get("mode", "all"), payload.get("page_id"), payload.get("item_id")))
+                self.respond(enrichment.start(list(PAGES.values()), payload.get("mode", "all"), payload.get("page_id"), payload.get("item_id"), payload.get("force", False)))
             elif path == "/api/export":
                 with LOCK:
                     self.respond(export_report())

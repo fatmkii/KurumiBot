@@ -41,7 +41,7 @@ def request(image, prompt, validate):
 
 def ocr(image):
     def validate(data):
-        if not isinstance(data.get('quote'), str) or not data['quote'].strip() or len(data['quote']) > 10000 or type(data.get('uncertain')) is not bool:
+        if not isinstance(data.get('quote'), str) or len(data['quote']) > 10000 or type(data.get('uncertain')) is not bool:
             raise ValueError('OCR quote missing')
     return request(image, '''这是人工确认用于聊天回复的漫画素材裁剪图，允许所有角色，不限定久留美。识别框内主角对应的完整繁体目标台词，保持原字与标点，多气泡按漫画阅读顺序合并。
 保留目标说话人的对白或明确内心独白；若框内明显是完整多人物接话片段，按阅读顺序保留。排除无关旁白、背景文字和拟声词，不因角色不是久留美而漏掉台词。不要补写看不清或裁剪之外的文字。
@@ -83,7 +83,7 @@ def eligible(item):
     return item.get('box_reviewed') and item.get('speaker') == 'confirmed'
 
 
-def start(pages, mode='all', page_id=None, item_id=None):
+def start(pages, mode='all', page_id=None, item_id=None, force=False):
     global JOB
     if mode not in {'all', 'ocr', 'metadata'}:
         raise ValueError('处理模式无效')
@@ -104,9 +104,9 @@ def start(pages, mode='all', page_id=None, item_id=None):
         if not tasks:
             raise ValueError('没有已保存且框体／说话人已确认的素材，请先保存复核结果')
         state = {'status': 'running', 'total': len(tasks), 'completed': 0, 'failed': 0, 'skipped': 0,
-                 'current': '', 'mode': mode, 'error': '', 'started_at': datetime.now(timezone.utc).isoformat()}
+                 'current': '', 'mode': mode, 'force': bool(force), 'error': '', 'started_at': datetime.now(timezone.utc).isoformat()}
         store.write(job_path(), state)
-        JOB = threading.Thread(target=run, args=(tasks, mode, bool(item_id), state), daemon=True)
+        JOB = threading.Thread(target=run, args=(tasks, mode, bool(item_id) or force, state), daemon=True)
         JOB.start()
         return progress()
 
@@ -141,10 +141,11 @@ def process(page, item_id, mode, force=False):
             return 'skipped'
         try:
             result = ocr(image)
+            uncertain = result['uncertain'] or not result['quote'].strip()
             changes = {'ocr_text': result['quote'], 'ocr_bbox': item['bbox'],
-                       'ocr_status': 'needs_review' if result['uncertain'] else 'recognized'}
+                       'ocr_status': 'needs_review' if uncertain else 'recognized'}
             if expected['quote_source'] == 'human' and expected['quote'].strip():
-                changes['ocr_status'] = 'confirmed' if not result['uncertain'] else 'needs_review'
+                changes['ocr_status'] = 'confirmed' if not uncertain else 'needs_review'
             else:
                 changes.update(quote=result['quote'], quote_source='ocr')
                 if result['quote'] != expected['quote'] and metadata_complete(expected):

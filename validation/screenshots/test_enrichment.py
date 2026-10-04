@@ -59,6 +59,31 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(item['meaning'], '人工含义')
         self.meta_mock.assert_not_called()
 
+    def test_empty_ocr_is_valid_and_clears_automatic_guess_without_description(self):
+        self.save()
+        saved = store.page_state(self.page)
+        saved['items'][0].update(quote='旧自动猜测', quote_source='auto')
+        store.save_correction(self.page, saved, generated=True)
+        record = self.item()
+        self.assertEqual(record['quote_source'], 'auto')
+        self.ocr_mock.return_value = {'quote': '', 'uncertain': False}
+        self.assertEqual(enrichment.process(self.page, 'manual-test', 'all'), 'failed')
+        item = self.item()
+        self.assertEqual(item['quote'], '')
+        self.assertEqual(item['ocr_status'], 'needs_review')
+        self.assertEqual(item['ocr_error'], '')
+        self.assertFalse(ready(item))
+        self.meta_mock.assert_not_called()
+
+    def test_ocr_prompt_accepts_no_visible_dialogue(self):
+        self.ocr.stop()
+        def no_dialogue(image, prompt, validate):
+            data = {'quote': '', 'uncertain': False}
+            validate(data)
+            return data
+        with patch.object(enrichment, 'request', side_effect=no_dialogue):
+            self.assertEqual(enrichment.ocr(b'not-sent')['quote'], '')
+
     def test_changed_crop_invalidates_and_requires_review(self):
         self.save()
         enrichment.process(self.page, 'manual-test', 'all')
