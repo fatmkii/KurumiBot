@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>久留美 · 管理后台</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <section id="login-screen" class="login-screen" hidden>
+    <div class="login-art" aria-hidden="true"><span class="big-k">K.</span><span class="art-note">一句台词，<br>接住每一种情绪。</span><span class="art-caption">FX 戦士くるみちゃん / KURUMIBOT</span></div>
+    <div class="login-panel">
+      <div class="eyebrow">KURUMIBOT / CONTROL ROOM</div>
+      <h1>久留美的<br>后台工作室<span class="red">。</span></h1>
+      <p class="muted">查看回复，打磨台词，照看你的机器人。</p>
+      <form id="login-form">
+        <label for="username">用户名</label><input id="username" name="username" autocomplete="username" required>
+        <label for="password">密码</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+        <p id="login-error" class="error" role="alert"></p>
+        <button type="submit" class="primary full">进入工作室 <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="login-foot">仅供管理员使用 · 会话有效期 8 小时</p>
+    </div>
+  </section>
+  <div id="workspace" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#overview"><span class="brand-mark">K.</span><span>久留美<span class="brand-sub">BOT 工作室</span></span></a>
+      <div class="nav-label">管理台 / WORKSPACE</div>
+      <nav aria-label="管理后台导航">
+        <a href="#overview" data-page="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg>运行概览</a>
+        <a href="#conversations" data-page="conversations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4zM8 8h8M8 12h5"/></svg>对话记录</a>
+        <a href="#usage" data-page="usage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 16V9M12 16V4M18 16v-6"/></svg>AI 用量</a>
+        <a href="#materials" data-page="materials"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v16H3zM3 15l5-5 5 5 3-3 5 5M16 8h.01"/></svg>台词素材库</a>
+        <a href="#settings" data-page="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6"/></svg>连接与配置</a>
+      </nav>
+      <div class="sidebar-note"><span class="small-rule"></span>漫画里的反应，<br>聊天里的刚刚好。<span class="mono">245 FRAMES · VOL. 01—06</span></div>
+      <div class="account"><span class="avatar" aria-hidden="true">管</span><span id="account-name">管理员</span><button id="logout" class="logout" aria-label="退出登录" title="退出登录">退出</button></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <header class="topbar"><span class="eyebrow">KURUMI / CONTROL ROOM</span><span class="topbar-right"><span class="mode-label">私聊 / 群 @</span><span class="mono">01</span><button id="mobile-logout" class="mobile-logout text-button">退出</button></span></header>
+      <div class="page-heading"><div><p id="page-kicker" class="eyebrow">OVERVIEW</p><h1 id="page-title">运行概览</h1><p id="page-description" class="muted">从一句消息，到一张恰到好处的图片。</p></div><button id="refresh" class="secondary">↻ 刷新数据</button></div>
+      <p id="page-error" class="error" role="alert" hidden></p>
+      <div id="content" aria-live="polite"><div class="loading">正在读取工作室数据…</div></div>
+      <footer class="page-footer"><span>FX 戦士くるみちゃん · 非商业娱乐项目</span><span id="updated-at">等待更新</span></footer>
+    </main>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title">详情</h2><button id="close-dialog" class="icon-button" aria-label="关闭详情">×</button></div><div id="dialog-body"></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

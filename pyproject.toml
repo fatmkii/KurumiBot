@@ -1,0 +1,15 @@
+[project]
+name = "kurumibot"
+version = "0.1.0"
+description = "久留美 QQ 私聊图片回复机器人"
+requires-python = ">=3.12"
+dependencies = ["aiohttp>=3.12", "httpx>=0.28.1", "python-dotenv>=1.0", "qqbot-agent-sdk==1.2.2"]
+
+[dependency-groups]
+dev = ["playwright>=1.50", "pytest>=8.3", "pytest-asyncio>=0.25"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+markers = ["browser: browser integration tests; requires Playwright Chromium"]

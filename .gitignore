@@ -1,5 +1,11 @@
 comics/
 .env
+.env.lock
+.env-*
+.venv/
+__pycache__/
+.pytest_cache/
+data/
 validation/qqbot/.venv/
 validation/qqbot/__pycache__/
 materials/library-v1/images/
