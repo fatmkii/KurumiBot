@@ -71,7 +71,7 @@ async def test_selection_fallback(setup_bot, selection, fallback):
     s = setup_bot
     s.selector.select.return_value = selection
     await s.service.handle(event())
-    assert s.sender.send.call_args.args[1] == s.config.default_image
+    assert s.sender.send.call_args.args[1] == s.image
     assert last_row(s)["fallback_reason"] == fallback
 
 
@@ -90,15 +90,19 @@ async def test_recheck_material_after_ai(setup_bot, change):
     s.selector.select.side_effect = select
     await s.service.handle(event())
     assert last_row(s)["fallback_reason"] == "material_unavailable"
-    assert s.sender.send.call_args.args[1] == s.config.default_image
-
-
-async def test_missing_default_does_not_kill_next_message(setup_bot):
-    s = setup_bot
-    s.config.default_image.unlink()
-    await s.service.handle(event(content=""))
-    assert last_row(s)["error_type"] == "default_image_missing"
+    assert last_row(s)["error_type"] == "no_available_images"
     s.sender.send.assert_not_awaited()
+
+
+async def test_empty_library_does_not_kill_next_message(setup_bot):
+    s = setup_bot
+    s.db.execute("UPDATE materials SET enabled=0")
+    s.db.commit()
+    await s.service.handle(event(content=""))
+    assert last_row(s)["error_type"] == "no_available_images"
+    s.sender.send.assert_not_awaited()
+    s.db.execute("UPDATE materials SET enabled=1")
+    s.db.commit()
     await s.service.handle(event(message="next"))
     assert last_row(s)["status"] == "sent"
 
@@ -218,7 +222,7 @@ async def test_group_at_full_pipeline(setup_bot, content):
     else:
         s.selector.select.assert_not_awaited()
         assert last_row(s)["fallback_reason"] == "empty_message"
-        assert uploader.upload.call_args.kwargs["source"] == str(s.config.default_image)
+        assert uploader.upload.call_args.kwargs["source"] == str(s.image)
 
 
 async def test_dedup_scoped_to_channel_and_conversation(setup_bot):
@@ -320,3 +324,53 @@ def test_published_library():
         assert all(library.selected_image(c["id"], {c["id"]}).is_file() for c in candidates)
     finally:
         library.close()
+
+
+async def test_recent_replies_scoped_bounded_and_persistent(setup_bot):
+    s = setup_bot
+    for i in range(12):
+        await s.service.handle(event(message=str(i), content=f"留言{i}"))
+    replies = s.selector.select.call_args.args[2]
+    assert len(replies) == 10
+    assert [r["message"] for r in replies] == [f"留言{i}" for i in range(1, 11)]
+    assert all(r["material_id"] == "a" for r in replies)
+    s.history.close()
+    s.history = History(s.config.history)
+    s.service.history = s.history
+    assert len(s.history.recent_replies(event())) == 10
+    assert s.history.recent_replies(event(scope="group", chat="u")) == []
+    assert s.history.recent_replies(event(user="other")) == []
+    skipped = s.history.claim(event(message="failed"), "失败留言")
+    s.history.finish(skipped, status="failed", material_id="a")
+    assert s.history.recent_replies(event())[-1]["message"] == "留言11"
+
+
+async def test_random_fallback_avoids_recent_and_records_id(setup_bot):
+    s = setup_bot
+    s.db.execute("INSERT INTO materials SELECT 'b',image_path,quote_traditional,quote_simplified,"
+                 "emotion_tags,meaning,scenarios,enabled FROM materials WHERE id='a'")
+    s.db.commit()
+    await s.service.handle(event())
+    await s.service.handle(event(message="empty", content=""))
+    assert last_row(s)["material_id"] == "b"
+    assert s.history.recent_replies(event())[-1]["fallback_reason"] == "empty_message"
+    assert s.library.random_image({"a", "b"})[0] in {"a", "b"}
+    s.db.execute("UPDATE materials SET enabled=0 WHERE id='b'")
+    s.db.commit()
+    assert s.library.random_image()[0] == "a"
+
+
+async def test_selector_receives_reply_context(setup_bot):
+    s = setup_bot
+    replies = [{"message": "前一句", "material_id": "a", "scene": "兴奋", "reason": "接梗"}]
+
+    def response(request):
+        body = json.loads(request.content)
+        payload = json.loads(body["messages"][1]["content"])
+        assert payload["recent_replies"] == replies
+        return httpx.Response(200, json={"choices": [{"finish_reason": "stop",
+            "message": {"content": json.dumps({"id": "a", "scene": "", "reason": ""})}}]})
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as http:
+        result = await Selector(http, s.config).select("测试", s.library.candidates(), replies)
+    assert result.error_type is None

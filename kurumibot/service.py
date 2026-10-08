@@ -54,6 +54,7 @@ class BotService:
         attempts = 0
         try:
             self.emit("message_received", **fields)
+            recent_replies = self.history.recent_replies(event)
             candidates = self.library.candidates()
             material_id, image = None, None
             fallback_reason = None
@@ -62,7 +63,7 @@ class BotService:
             elif not candidates:
                 fallback_reason = "no_candidates"
             else:
-                selection = await self.selector.select(content, candidates)
+                selection = await self.selector.select(content, candidates, recent_replies)
                 self.history.usage(conversation_id, selection)
                 material_id = selection.material_id
                 if selection.error_type:
@@ -74,10 +75,9 @@ class BotService:
                     if image is None:
                         fallback_reason = "material_unavailable"
             if image is None:
-                material_id = None
-                image = self.config.default_image
-                if not image.is_file():
-                    finish("failed", fallback_reason=fallback_reason, error_type="default_image_missing")
+                material_id, image = self.library.random_image({r["material_id"] for r in recent_replies})
+                if image is None:
+                    finish("failed", fallback_reason=fallback_reason, error_type="no_available_images")
                     return
             self.history.finish(conversation_id, status="processing", material_id=material_id,
                                 image_path=str(image), fallback_reason=fallback_reason)

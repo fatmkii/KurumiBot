@@ -32,10 +32,14 @@ async def main(args):
                 result = await Selector(http, config).select(args.text, candidates)
             history.usage(None, result)
             image = library.selected_image(result.material_id, {c["id"] for c in candidates})
-            item = next((c for c in candidates if c["id"] == result.material_id), {})
-            emit("selection_preview", material_id=result.material_id, quote=item.get("quote_simplified"),
-                 scene=result.scene, reason=result.reason, image=str(image or config.default_image),
-                 fallback=image is None, error_type=result.error_type,
+            fallback = image is None
+            material_id = result.material_id
+            if fallback:
+                material_id, image = library.random_image()
+            item = next((c for c in candidates if c["id"] == material_id), {})
+            emit("selection_preview", material_id=material_id, quote=item.get("quote_simplified"),
+                 scene=result.scene, reason=result.reason, image=str(image) if image else None,
+                 fallback=fallback, error_type=result.error_type,
                  elapsed_seconds=result.elapsed_seconds, usage=result.usage)
             return 1 if result.error_type else 0
         await run(config, library, history)

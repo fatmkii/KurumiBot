@@ -26,7 +26,7 @@ uv run --locked --env-file .env python -m kurumibot run
 群聊测试：把机器人加入测试群，使用 QQ 的 @ 功能选中机器人，再发送上面的语句。
 程序只接收 `GROUP_AT_MESSAGE_CREATE` 与 `C2C_MESSAGE_CREATE`，使用事件中的群 openid 或用户 openid
 向原会话上传和回复图片。普通群消息、频道消息、入群通知均不触发 AI 或图片回复。
-群 @ 前缀从选图文本中移除；只 @ 不带文字时回复固定兜底图。
+群 @ 前缀从选图文本中移除；只 @ 不带文字时回复图库随机图片。
 同一用户的频率限制跨会话共享（以 QQ 事件提供的用户 openid 为准），不同群和私聊按各自会话去重。
 群聊实际准入、@ 事件接收及 QQ 客户端图片显示需入群后验证，不能用私聊成功代替群聊验证。
 
@@ -51,14 +51,13 @@ uv run --locked --env-file .env python -m kurumibot select '我刚买完就跌�
 ## 配置及运行规则
 
 密钥只放 `.env`，参考 `.env.example`；修改后需重启。兼容原探针的 `QQBOT_APP_ID` / `QQBOT_CLIENT_SECRET`。
-相对路径均以项目根目录为基准。固定兜底使用 `v06-p088` 的“看不懂……现在的行情……”图片，可通过
-`KURUMI_DEFAULT_IMAGE` 更换，不会隐式挑第一条素材。
+相对路径均以项目根目录为基准。兜底从已启用且文件存在的图库图片中随机选择，优先避开该会话最近 10 次回复的图片。
 
 | 变量 | 默认值 | 含义 |
 | --- | --- | --- |
 | `DEEPSEEK_MODEL` | `deepseek-flash` | 官方模型名称 |
 | `KURUMI_LIBRARY` | `materials/library-v1` | 含 SQLite 和 images 的素材目录 |
-| `KURUMI_DEFAULT_IMAGE` | `materials/library-v1/images/v06-p088-manual-9c6ecdf5-9300-4006-8a48-c51279382a9e.png` | 固定兜底图片 |
+| `KURUMI_DEFAULT_IMAGE` | `materials/library-v1/images/v06-p088-manual-9c6ecdf5-9300-4006-8a48-c51279382a9e.png` | 兼容旧配置，回复不再使用固定兜底 |
 | `KURUMI_HISTORY` | `data/history.sqlite3` | 对话及用量数据库 |
 | `KURUMI_AI_TIMEOUT` | `30` | AI 请求总超时（秒） |
 | `KURUMI_SEND_TIMEOUT` | `60` | 每次上传 + 发送总超时（秒） |
@@ -66,8 +65,11 @@ uv run --locked --env-file .env python -m kurumibot select '我刚买完就跌�
 | `KURUMI_USER_INTERVAL` | `5` | 同一用户处理间隔（秒） |
 | `KURUMI_SEND_ATTEMPTS` | `2` | 图片上传/发送最多尝试次数（1～3） |
 
-空消息、无可用候选、无匹配、AI 超时/请求失败/无效输出、选中素材停用或文件缺失均走固定兜底。
-兜底也检查文件；启动时缺失会拒绝启动，运行中缺失记录失败并继续服务。
+空消息、无匹配、AI 超时/请求失败/无效输出、选中素材停用或文件缺失均走图库随机兜底。
+图库无可用图片时记录 `no_available_images`，不发送图片并继续服务。
+每次选图向 AI 提供同一私聊或群聊最近 10 次成功回复（留言、图片 ID、场景、理由及兜底原因），
+按从旧到新排列，重启后仍可读取。失败、限流和处理中记录不计入；不同会话互不混用。
+提示词鼓励荒诞联想、反差和跨场景玩梗，优先避免近期重复，明显更贴切时仍允许重复。
 AI 校验失败会保留固定原因：`invalid_selection_id`（返回 ID 不在候选中）、
 `invalid_selection_metadata`（场景或理由字段无效）、`selection_output_truncated`（输出达到长度限制）、
 `incomplete_selection`（返回未正常结束）。对话的兜底原因会加 `ai_` 前缀；旧的 `ai_ValueError` 记录无法还原具体校验项。
@@ -146,7 +148,7 @@ Bot 只需要出站 HTTPS / WebSocket 连接。
 脚本安装 uv 和 Python 3.12，按 `uv.lock` 安装生产依赖，校验素材压缩包的 SHA256，
 自动解压到 `data/materials/library-v1`，并将 `.env` 中原有默认素材及兜底路径迁移到该目录。
 已有默认素材数据库的人工修改通过 SQLite backup 保留；自定义素材路径则仅校验，不迁移。
-之后检查必填密钥、已启用素材的图片、兜底图片及后台网卡地址，生成后台密码与 Supervisor 配置，
+之后检查必填密钥、已启用素材的图片及后台网卡地址，生成后台密码与 Supervisor 配置，
 启动 `kurumibot` 和 `kurumibot-admin`，设为开机自启及异常退出自动重启。
 uv 安装方式参考 [官方安装说明](https://docs.astral.sh/uv/getting-started/installation/)。
 

@@ -61,8 +61,6 @@ async def run(config, library, history):
     logging.disable(logging.CRITICAL)
     if not config.app_id or not config.app_secret:
         raise ValueError("missing_qq_credentials")
-    if not config.default_image.is_file():
-        raise ValueError("default_image_missing")
     history.recover()
     loop = asyncio.get_running_loop()
     stop = asyncio.Event()

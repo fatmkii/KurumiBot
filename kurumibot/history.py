@@ -68,5 +68,16 @@ class History:
         )
         self.db.commit()
 
+    def recent_replies(self, event):
+        rows = self.db.execute(
+            "SELECT c.content AS message, c.material_id, c.fallback_reason, a.scene, a.reason "
+            "FROM conversations c LEFT JOIN ai_usage a ON a.id = "
+            "(SELECT MAX(id) FROM ai_usage WHERE conversation_id=c.id) "
+            "WHERE c.scope=? AND c.chat_hash=? AND c.status='sent' "
+            "ORDER BY c.finished_at DESC, c.id DESC LIMIT 10",
+            (event.chat_scope, masked(event.chat_id)),
+        ).fetchall()
+        return [dict(row) for row in reversed(rows)]
+
     def close(self):
         self.db.close()

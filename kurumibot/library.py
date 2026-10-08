@@ -1,4 +1,5 @@
 import json
+import random
 import sqlite3
 from pathlib import Path
 
@@ -33,6 +34,17 @@ class Library:
             return None
         row = self.db.execute("SELECT image_path FROM materials WHERE id = ? AND enabled = 1", (material_id,)).fetchone()
         return self.image(row) if row else None
+
+    def random_image(self, recent_ids=()):
+        items = [dict(row) for row in self.db.execute(
+            "SELECT id, image_path FROM materials WHERE enabled = 1"
+        ) if self.image(row)]
+        fresh = [item for item in items if item["id"] not in recent_ids]
+        pool = fresh or items
+        if not pool:
+            return None, None
+        item = random.choice(pool)
+        return item["id"], self.image(item)
 
     def close(self):
         self.db.close()

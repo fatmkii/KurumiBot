@@ -96,8 +96,6 @@ def prepare(root, uv_bin, username):
             raise DeploymentError("存在缺失图片的已启用素材，请检查素材目录")
     finally:
         library.close()
-    if not config.default_image.is_file():
-        raise DeploymentError("兜底图片不存在，请检查 KURUMI_DEFAULT_IMAGE")
     config.history.parent.mkdir(parents=True, exist_ok=True)
     ensure_login(env_file)
     env_file.chmod(0o600)
