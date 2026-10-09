@@ -6,11 +6,10 @@ from pathlib import Path
 
 from dotenv import dotenv_values, set_key
 
-from .config import ROOT
+from .config import ROOT, DEFAULT_MODEL
 
 ENV_FILE = ROOT / ".env"
-SECRET_KEYS = ("QQ_APP_ID", "QQ_APP_SECRET", "DEEPSEEK_API_KEY")
-MODELS = ("deepseek-flash", "deepseek-v4-pro")
+SECRET_KEYS = ("QQ_APP_ID", "QQ_APP_SECRET", "CODEX_OAUTH_PROXY_API_KEY")
 
 
 def read_env(path=ENV_FILE):
@@ -52,8 +51,7 @@ def settings(path=ENV_FILE):
     values = read_env(path)
     aliases = {"QQ_APP_ID": "QQBOT_APP_ID", "QQ_APP_SECRET": "QQBOT_CLIENT_SECRET"}
     return {
-        "model": values.get("DEEPSEEK_MODEL") or "deepseek-flash",
-        "models": MODELS,
+        "model": values.get("CODEX_OAUTH_PROXY_MODEL") or DEFAULT_MODEL,
         "secrets": {key: "已配置 · ••••" + (value[-4:] if len(value) > 4 else "") if value else "未配置"
                     for key in SECRET_KEYS
                     for value in [values.get(key) or values.get(aliases.get(key, ""), "")]},
@@ -61,16 +59,16 @@ def settings(path=ENV_FILE):
 
 
 def update_settings(payload, path=ENV_FILE):
-    if set(payload) - {*SECRET_KEYS, "DEEPSEEK_MODEL"}:
+    if set(payload) - {*SECRET_KEYS, "CODEX_OAUTH_PROXY_MODEL"}:
         raise ValueError("包含不支持的配置项")
     updates = {}
     for key, value in payload.items():
         if not isinstance(value, str) or len(value) > 512 or any(c in value for c in "\r\n\x00"):
             raise ValueError("配置格式无效")
         value = value.strip()
-        if key == "DEEPSEEK_MODEL":
-            if value not in MODELS:
-                raise ValueError("请选择支持的 DeepSeek 官方模型")
+        if key == "CODEX_OAUTH_PROXY_MODEL":
+            if not value or any(c.isspace() for c in value):
+                raise ValueError("请填写代理 /v1/models 返回的模型 ID")
             updates[key] = value
         elif value:
             updates[key] = value

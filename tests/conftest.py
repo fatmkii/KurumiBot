@@ -31,7 +31,7 @@ def admin_fixture(tmp_path):
                     default_image=default, history=tmp_path / "history.sqlite3")
     env = tmp_path / ".env"
     env.write_text("# Keep this comment\nKURUMI_ADMIN_USERNAME=admin\nKURUMI_ADMIN_PASSWORD=test-admin-password\n"
-                   "DEEPSEEK_API_KEY=test-api-key\nQQ_APP_ID=test-app\nQQ_APP_SECRET=test-qq-secret\nUNRELATED='preserve me'\n")
+                   "CODEX_OAUTH_PROXY_API_KEY=test-api-key\nQQ_APP_ID=test-app\nQQ_APP_SECRET=test-qq-secret\nUNRELATED='preserve me'\n")
     history = History(config.history)
     event = SimpleNamespace(chat_scope="c2c", chat_id="test-user", user_id="test-user", message_id="one")
     conversation_id = history.claim(event, "老板又让我加班，烦死了")

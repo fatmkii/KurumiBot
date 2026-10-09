@@ -57,7 +57,7 @@ def prepare(root, uv_bin, username):
     env_file = root / ".env"
     load_dotenv(env_file, override=True)
     for name, alias in (("QQ_APP_ID", "QQBOT_APP_ID"), ("QQ_APP_SECRET", "QQBOT_CLIENT_SECRET"),
-                        ("DEEPSEEK_API_KEY", "DEEPSEEK_API_KEY")):
+                        ("CODEX_OAUTH_PROXY_API_KEY", "CODEX_OAUTH_PROXY_API_KEY")):
         if not (os.getenv(name) or os.getenv(alias)):
             raise DeploymentError(f"请在 .env 填写 {name}")
     host = os.getenv("KURUMI_ADMIN_HOST") or lan_host()

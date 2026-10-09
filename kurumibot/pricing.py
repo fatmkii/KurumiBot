@@ -3,7 +3,7 @@ RATES = {
     "deepseek-flash": (0.04, 2.0, 8.0),
     "deepseek-v4-pro": (0.30, 9.0, 27.0),
 }
-PRICE_NOTE = "按 2026-10-04 官方高峰费率估算，未计低峰折扣；仅供参考，以供应商账单为准。"
+PRICE_NOTE = "Codex OAuth Proxy 调用费用未知；历史 DeepSeek 调用按 2026-10-04 官方高峰费率估算，未计低峰折扣，仅供参考。"
 PRICE_SOURCE = "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
 
 

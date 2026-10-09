@@ -1,6 +1,6 @@
 # KurumiBot 后台
 
-Python 3.12 / uv，正式素材库 SQLite + DeepSeek 官方 API + 腾讯 qqbot-agent-sdk 1.2.2。
+Python 3.12 / uv，正式素材库 SQLite + Codex OAuth Proxy + 腾讯 qqbot-agent-sdk 1.2.2。
 当前版本响应 QQ 私聊和群里的 @ 消息，每条新消息选一张台词图片回复；普通群消息不触发回复。
 管理后台提供运行概览、对话记录、AI 用量及估算费用、素材预览与修正、连接配置。
 
@@ -10,7 +10,7 @@ Python 3.12 / uv，正式素材库 SQLite + DeepSeek 官方 API + 腾讯 qqbot-a
 
 ```bash
 uv sync --locked
-# 已有 .env 含 QQ_APP_ID、QQ_APP_SECRET、DEEPSEEK_API_KEY 时无需复制。
+# 已有 .env 含 QQ_APP_ID、QQ_APP_SECRET、CODEX_OAUTH_PROXY_API_KEY 时无需复制。
 # 首次部署才执行：cp .env.example .env，并填写密钥。
 uv run --locked --env-file .env python -m kurumibot run
 ```
@@ -37,7 +37,7 @@ uv run --locked --env-file .env python -m kurumibot run
 仍需在 QQ 客户端检查图片是否显示、台词是否接得上。Ctrl+C 正常停机。
 只启动一个实例；文件锁会阻止共享历史库的第二个 Bot 实例。
 
-选图预览（会真实调用 DeepSeek 并记录用量，不向 QQ 发消息）：
+选图预览（会真实调用 Codex OAuth Proxy 并记录用量，不向 QQ 发消息）：
 
 ```bash
 uv run --locked --env-file .env python -m kurumibot select '我刚买完就跌了，亏麻了'
@@ -45,8 +45,10 @@ uv run --locked --env-file .env python -m kurumibot select '我刚买完就跌�
 
 输出选中 ID、台词、场景、理由、图片路径、用量和耗时。首版把全部已启用且文件存在的候选文本交给模型，
 不上传图片，不做在线 OCR。返回 ID 必须属于本次候选集合，发送前再次查 SQLite 的启用状态及文件。
-使用 DeepSeek 的 JSON 输出及非思考模式，默认模型 `deepseek-flash`；
-接口依据 [DeepSeek 官方文档](https://api-docs.deepseek.com/zh-cn/api/create-chat-completion/)。
+使用 [Codex OAuth Proxy](https://github.com/dvcrn/codex-oauth-proxy) 的 OpenAI 兼容 Chat Completions 接口，
+地址固定为 `http://127.0.0.1:9879/v1`，默认模型 `gpt-6-luna-low`，请求 JSON 输出。
+启动 Bot 前需先启动代理；`CODEX_OAUTH_PROXY_API_KEY` 应与代理的 `ADMIN_API_KEY` 一致。
+可通过代理的 `/v1/models` 查询可用模型，用 `CODEX_OAUTH_PROXY_MODEL` 更换。
 
 ## 配置及运行规则
 
@@ -55,7 +57,8 @@ uv run --locked --env-file .env python -m kurumibot select '我刚买完就跌�
 
 | 变量 | 默认值 | 含义 |
 | --- | --- | --- |
-| `DEEPSEEK_MODEL` | `deepseek-flash` | 官方模型名称 |
+| `CODEX_OAUTH_PROXY_API_KEY` | 无 | 本机代理的 API 密钥 |
+| `CODEX_OAUTH_PROXY_MODEL` | `gpt-6-luna-low` | 代理支持的模型 ID，可包含推理强度后缀 |
 | `KURUMI_LIBRARY` | `materials/library-v1` | 含 SQLite 和 images 的素材目录 |
 | `KURUMI_DEFAULT_IMAGE` | `materials/library-v1/images/v06-p088-manual-9c6ecdf5-9300-4006-8a48-c51279382a9e.png` | 兼容旧配置，回复不再使用固定兜底 |
 | `KURUMI_HISTORY` | `data/history.sqlite3` | 对话及用量数据库 |
@@ -85,7 +88,7 @@ SDK 管理 WebSocket 心跳及自动重连，会话状态仅在当前进程保�
 
 `data/history.sqlite3` 的 `conversations` 保存留言、素材 ID、图片路径、兜底原因、发送状态、次数和总耗时；
 `ai_usage` 保存模型、候选数、场景判断、选图理由、实际 token 用量、AI 耗时和失败类型。
-`select` 预览的用量记录 `conversation_id` 为空。管理页按实际 token 用量计算估算费用。
+`select` 预览的用量记录 `conversation_id` 为空。管理页在供应商返回用量时记录 token；Codex 模型不套用 DeepSeek 费率，费用显示未知。
 用户、会话及消息标识以哈希保存。对话正文会存储在本机历史库中；不要提交或公开 `data/`。
 
 ```bash
@@ -135,7 +138,7 @@ git clone <你的仓库地址> KurumiBot
 cd KurumiBot
 cp .env.example .env
 nano .env
-# 填好 QQ_APP_ID、QQ_APP_SECRET、DEEPSEEK_API_KEY 后执行：
+# 填好 QQ_APP_ID、QQ_APP_SECRET、CODEX_OAUTH_PROXY_API_KEY 后执行：
 bash deploy/install.sh
 ```
 
@@ -209,12 +212,12 @@ uv run --locked --env-file .env python -m kurumibot.admin --host 172.19.124.247
   Bot 状态依据进程锁显示，仅表示进程运行，不能代替 QQ 连接状态检查。
 - **对话记录**：按留言或发送状态筛选，预览实际回复图，查看场景、选图理由、耗时、重试次数及失败或兜底原因。
 - **AI 用量**：显示私聊、群 @ 与命令行预览的模型、实际输入/输出 token、缓存命中、耗时和失败原因。
-  费用统一按 [2026-10-04 官方报价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
+  历史 DeepSeek 调用按 [2026-10-04 官方报价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
   的高峰费率保守估算，未包含低峰折扣；历史记录也采用这份报价，仅供参考，不是供应商账单。
   没有 token 用量或未知模型的调用显示费用未知；累计值不包含这些调用。
 - **台词素材库**：按台词、情绪、场景、卷号及启用状态筛选，预览原图，修正繁体与简体台词、情绪标签、含义、场景及启用状态。
   修改直接写入运行时 `library.sqlite3`，下一条新消息立即使用；不修改原图裁剪与追溯信息。
-- **连接与配置**：选择 DeepSeek 官方模型，更新 DeepSeek API 密钥、QQ App ID 和 Client Secret。
+- **连接与配置**：填写 Codex OAuth Proxy 模型 ID，更新代理 API 密钥、QQ App ID 和 Client Secret。
   只显示脱敏值，输入框始终为空；留空保留已有值。修改保存到 `.env`，需另行重启 Bot 后生效。
 
 页面提供刷新按钮读取最新记录，时间按浏览器本地时区显示。

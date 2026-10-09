@@ -261,6 +261,11 @@ async def test_model_output_validation(setup_bot, parsed, finish, error):
 
     def response(request):
         body = json.loads(request.content)
+        assert str(request.url) == "http://127.0.0.1:9879/v1/chat/completions"
+        assert request.headers["Authorization"] == "Bearer key"
+        assert body["model"] == "gpt-6-luna-low"
+        assert body["stream"] is False
+        assert "thinking" not in body
         assert len(body["messages"]) == 2
         assert "image_path" not in body["messages"][1]["content"]
         return httpx.Response(200, json={"choices": [{"finish_reason": finish,
@@ -272,6 +277,34 @@ async def test_model_output_validation(setup_bot, parsed, finish, error):
     assert result.usage == {"total_tokens": 123}
     if error:
         assert result.material_id is None
+
+
+def test_proxy_config_from_env(monkeypatch):
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "old-key")
+    monkeypatch.setenv("DEEPSEEK_MODEL", "deepseek-flash")
+    monkeypatch.setenv("CODEX_OAUTH_PROXY_API_KEY", "proxy-key")
+    monkeypatch.delenv("CODEX_OAUTH_PROXY_MODEL", raising=False)
+    config = Config.from_env()
+    assert config.api_key == "proxy-key"
+    assert config.model == "gpt-6-luna-low"
+    monkeypatch.setenv("CODEX_OAUTH_PROXY_MODEL", "gpt-6-sol-low")
+    assert Config.from_env().model == "gpt-6-sol-low"
+    monkeypatch.delenv("CODEX_OAUTH_PROXY_API_KEY")
+    with pytest.raises(ValueError, match="missing_codex_oauth_proxy_api_key"):
+        Config.from_env()
+    assert Config.from_env(require_api_key=False).api_key == ""
+
+
+async def test_proxy_response_without_usage(setup_bot):
+    def response(request):
+        return httpx.Response(200, json={"choices": [{"finish_reason": "stop",
+            "message": {"content": json.dumps({"id": "a", "scene": "测试", "reason": "接梗"})}}]})
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(response)) as http:
+        result = await Selector(http, setup_bot.config).select("测试", setup_bot.library.candidates())
+    assert result.error_type is None
+    assert result.material_id == "a"
+    assert result.usage == {}
 
 
 @pytest.mark.parametrize("mode", ["timeout", "http", "malformed"])

@@ -56,7 +56,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="久留美 QQ 图片 Bot（私聊与群 @）")
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("run", help="连接 QQ 并处理私聊与群 @")
-    select = commands.add_parser("select", help="真实调用 DeepSeek 预览选图，不向 QQ 发消息")
+    select = commands.add_parser("select", help="真实调用 Codex OAuth Proxy 预览选图，不向 QQ 发消息")
     select.add_argument("text")
     try:
         raise SystemExit(asyncio.run(main(parser.parse_args())))

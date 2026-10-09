@@ -16,7 +16,7 @@ if [[ "$ID" != ubuntu ]] || [[ ! -d /run/systemd/system ]]; then
 fi
 if [[ ! -f .env ]]; then
     cp .env.example .env
-    echo '已创建 .env。请填写 QQ_APP_ID、QQ_APP_SECRET、DEEPSEEK_API_KEY 后重新执行。' >&2
+    echo '已创建 .env。请填写 QQ_APP_ID、QQ_APP_SECRET、CODEX_OAUTH_PROXY_API_KEY 后重新执行。' >&2
     exit 1
 fi
 chmod 600 .env
@@ -49,7 +49,7 @@ fi
 export UV_CACHE_DIR="$repo_root/data/uv-cache"
 "$uv_bin" python install 3.12
 "$uv_bin" sync --locked --no-dev
-# 预检不会调用 QQ 或 DeepSeek；失败时不替换 Supervisor 配置。
+# 预检不会调用 QQ 或 Codex OAuth Proxy；失败时不替换 Supervisor 配置。
 "$uv_bin" run --offline --no-sync python -m deploy.prepare "$uv_bin" "$(id -un)"
 
 sudo install -m 644 data/kurumibot.conf /etc/supervisor/conf.d/kurumibot.conf

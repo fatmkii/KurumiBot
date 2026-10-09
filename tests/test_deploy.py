@@ -33,13 +33,13 @@ def deployment(tmp_path, admin_fixture, monkeypatch):
     (root / "materials/library-v1.zip.sha256").write_text(hashlib.sha256(archive.read_bytes()).hexdigest() + "  library-v1.zip\n")
     fallback = next((admin_fixture.config.library / "images").iterdir()).name
     (root / ".env").write_text(
-        "# keep comment\nQQ_APP_ID=test-app\nQQ_APP_SECRET=test-secret\nDEEPSEEK_API_KEY=test-key\n"
+        "# keep comment\nQQ_APP_ID=test-app\nQQ_APP_SECRET=test-secret\nCODEX_OAUTH_PROXY_API_KEY=test-key\n"
         "KURUMI_LIBRARY=materials/library-v1\n"
         f"KURUMI_DEFAULT_IMAGE=materials/library-v1/images/{fallback}\n"
         "KURUMI_ADMIN_HOST=192.168.1.20\n"
     )
     for name in list(os.environ):
-        if name.startswith(("KURUMI_", "QQ_", "QQBOT_", "DEEPSEEK_")):
+        if name.startswith(("KURUMI_", "QQ_", "QQBOT_", "DEEPSEEK_", "CODEX_OAUTH_PROXY_")):
             monkeypatch.delenv(name)
     monkeypatch.setattr("kurumibot.config.ROOT", root)
     monkeypatch.setattr("deploy.prepare.socket.socket", MagicMock())
@@ -91,8 +91,8 @@ def test_corrupt_package_never_publishes_partial_library(deployment):
 
 def test_missing_key_does_not_initialize_or_generate_config(deployment):
     env = deployment / ".env"
-    env.write_text(env.read_text().replace("DEEPSEEK_API_KEY=test-key", "DEEPSEEK_API_KEY="))
-    with pytest.raises(DeploymentError, match="DEEPSEEK_API_KEY"):
+    env.write_text(env.read_text().replace("CODEX_OAUTH_PROXY_API_KEY=test-key", "CODEX_OAUTH_PROXY_API_KEY="))
+    with pytest.raises(DeploymentError, match="CODEX_OAUTH_PROXY_API_KEY"):
         prepare(deployment, "/usr/bin/uv", pwd.getpwuid(os.getuid()).pw_name)
     assert not (deployment / "data").exists()
 

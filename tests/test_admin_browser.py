@@ -106,18 +106,18 @@ async def test_edit_and_toggle_material(browser_page,admin_fixture):
 async def test_settings_blank_preserve_and_restart_notice(browser_page,admin_fixture):
     page=browser_page
     await page.get_by_role('navigation').get_by_role('link',name='连接与配置').click()
-    await page.get_by_label('AI 模型',exact=True).select_option('deepseek-v4-pro')
-    await expect(page.get_by_label('DeepSeek API 密钥')).to_be_empty()
+    await page.get_by_label('AI 模型',exact=True).fill('gpt-6-sol-low')
+    await expect(page.get_by_label('Codex OAuth Proxy API 密钥')).to_be_empty()
     await page.get_by_role('button',name='保存配置').click()
     await expect(page.get_by_text('请重启 Bot 服务使修改生效。',exact=True)).to_be_visible()
     values=read_env(admin_fixture.env)
-    assert values['DEEPSEEK_API_KEY']=='test-api-key'
-    assert values['DEEPSEEK_MODEL']=='deepseek-v4-pro'
-    assert admin_fixture.config.model=='deepseek-flash'
-    await page.get_by_label('DeepSeek API 密钥').fill('replacement-test-api-key')
+    assert values['CODEX_OAUTH_PROXY_API_KEY']=='test-api-key'
+    assert values['CODEX_OAUTH_PROXY_MODEL']=='gpt-6-sol-low'
+    assert admin_fixture.config.model=='gpt-6-luna-low'
+    await page.get_by_label('Codex OAuth Proxy API 密钥').fill('replacement-test-api-key')
     await page.get_by_role('button',name='保存配置').click()
-    await expect(page.get_by_label('DeepSeek API 密钥')).to_be_empty()
-    assert read_env(admin_fixture.env)['DEEPSEEK_API_KEY']=='replacement-test-api-key'
+    await expect(page.get_by_label('Codex OAuth Proxy API 密钥')).to_be_empty()
+    assert read_env(admin_fixture.env)['CODEX_OAUTH_PROXY_API_KEY']=='replacement-test-api-key'
     assert 'replacement-test-api-key' not in await page.get_by_role('main').inner_text()
 
 

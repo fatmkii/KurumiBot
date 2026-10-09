@@ -28,7 +28,7 @@ async def test_login_cookie_logout_and_csrf(admin_client):
     cookie = next(cookie for cookie in admin_client.session.cookie_jar if cookie.key=='kurumi_session')
     assert cookie['httponly'] and cookie['samesite']=='Strict'
     assert (await admin_client.get('/api/overview')).status == 200
-    assert (await admin_client.post('/api/settings',json={'DEEPSEEK_MODEL':'deepseek-flash'})).status == 403
+    assert (await admin_client.post('/api/settings',json={'CODEX_OAUTH_PROXY_MODEL':'gpt-6-luna-low'})).status == 403
     assert (await admin_client.post('/api/settings',headers={**headers,'Origin':'https://other.example'},json={})).status == 403
     assert (await admin_client.post('/api/logout',headers=headers,json={})).status == 200
     assert (await admin_client.get('/api/overview')).status == 401
@@ -55,21 +55,21 @@ async def test_masked_settings_and_blank_preserve(admin_client, admin_fixture):
     text = json.dumps(result)
     assert all(secret not in text for secret in ('test-api-key','test-qq-secret','test-admin-password','test-app'))
     response = await admin_client.post('/api/settings',headers=headers,json={
-        'DEEPSEEK_MODEL':'deepseek-v4-pro','DEEPSEEK_API_KEY':'','QQ_APP_ID':'','QQ_APP_SECRET':'',
+        'CODEX_OAUTH_PROXY_MODEL':'gpt-6-sol-low','CODEX_OAUTH_PROXY_API_KEY':'','QQ_APP_ID':'','QQ_APP_SECRET':'',
     })
     assert (await response.json())['restart_required'] is True
     values = read_env(admin_fixture.env)
-    assert values['DEEPSEEK_API_KEY']=='test-api-key'
+    assert values['CODEX_OAUTH_PROXY_API_KEY']=='test-api-key'
     assert values['QQ_APP_SECRET']=='test-qq-secret'
-    assert values['DEEPSEEK_MODEL']=='deepseek-v4-pro'
+    assert values['CODEX_OAUTH_PROXY_MODEL']=='gpt-6-sol-low'
     assert values['UNRELATED']=='preserve me'
     assert '# Keep this comment' in admin_fixture.env.read_text()
     assert admin_fixture.env.stat().st_mode & 0o777 == 0o600
-    assert admin_fixture.config.model=='deepseek-flash'
+    assert admin_fixture.config.model=='gpt-6-luna-low'
 
 
 @pytest.mark.parametrize('payload',[
-    {'DEEPSEEK_MODEL':'not-supported'}, {'DEEPSEEK_API_KEY':'key\nOTHER=secret'},
+    {'CODEX_OAUTH_PROXY_MODEL':''}, {'CODEX_OAUTH_PROXY_MODEL':'invalid model'}, {'CODEX_OAUTH_PROXY_API_KEY':'key\nOTHER=secret'},
     {'KURUMI_ADMIN_PASSWORD':'replacement'}, {'QQ_APP_ID':123},
 ])
 async def test_invalid_settings_never_written(admin_client,admin_fixture,payload):

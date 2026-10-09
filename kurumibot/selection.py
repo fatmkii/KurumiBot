@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 
 import httpx
 
+from .config import AI_BASE_URL
 from .history import now
 
 PROMPT = """你是《FX战士久留美》娱乐QQ机器人的图片选图员。你只能选择给定候选中的一张图片。
@@ -47,9 +48,9 @@ class Selector:
         try:
             async with asyncio.timeout(self.config.ai_timeout):
                 response = await self.http.post(
-                    "https://api.deepseek.com/chat/completions",
+                    f"{AI_BASE_URL}/chat/completions",
                     headers={"Authorization": f"Bearer {self.config.api_key}"},
-                    json={"model": self.config.model, "thinking": {"type": "disabled"},
+                    json={"model": self.config.model, "stream": False,
                           "response_format": {"type": "json_object"}, "max_tokens": 256,
                           "messages": [{"role": "system", "content": PROMPT},
                                        {"role": "user", "content": json.dumps({
